@@ -20,14 +20,14 @@ This is NOT meant to be a guide or walkthrough but merely a dump of files and no
   - The DSDT is for MrChromebox's firmware version 4.11.2 (other versions may work but YMMV)
 
 ## Clover Installation Options
-![image](https://github.com/TheRandMan/Dell-Chromebook-13-7310-Hackintosh/raw/master/Clover_Setup.jpg)
+![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
 
 ## Clover Config
-  - [config.plist](https://github.com/TheRandMan/Dell-Chromebook-13-7310-Hackintosh/raw/master/config.plist)
+  - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
     - You will need to generate your own SMBIOS section - use the Macbook Air 7,2 profile
 
 ## Full list of DSDT / SSDT files
-- [DSDT.aml](https://github.com/TheRandMan/Dell-Chromebook-13-7310-Hackintosh/raw/master/DSDT.aml)
+- [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml)
 - SSDT-PLNF.aml
   - https://bitbucket.org/RehabMan/applebacklightfixup/downloads/
 
