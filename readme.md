@@ -34,26 +34,25 @@ This is NOT meant to be a guide or walkthrough but merely a dump of files and no
 ## List of Required Kexts
 ### Installed from Clover Configurator
 - AirportBrcmFixup.kext
-- SMCLightSensor.kext
-- VirtualSMC.kext
 - AppleALC.kext
-- SMCProcessor.kext
-- WhateverGreen.kext
 - Lilu.kext
-- SMCSuperIO.kext
-- SMCBatteryManager.kext
 - USBInjectAll.kext
-
+- WhateverGreen.kext
+- VirtualSMC.kext
+  - SMCBatteryManager.kext
+  - SMCProcessor.kext
+  - SMCSuperIO.kext
+  
 ### Installed from elsewhere:
-- VoodooI2C.kext
-- VoodooI2CSynaptics.kext
-  - https://github.com/alexandred/VoodooI2C/releases
-- VoodooPS2Controller.kext
-  - https://github.com/acidanthera/VoodooPS2/releases
 - BrcmBluetoothInjector.kext
 - BrcmFirmwareData.kext
 - BrcmPatchRAM3.kext
   - https://github.com/acidanthera/BrcmPatchRAM/releases
+- VoodooI2C.kext
+  - VoodooI2CSynaptics.kext
+    - https://github.com/alexandred/VoodooI2C/releases
+- VoodooPS2Controller.kext
+  - https://github.com/acidanthera/VoodooPS2/releases
 #
 #
 # 
