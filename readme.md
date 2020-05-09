@@ -63,6 +63,8 @@ Working on MacOS 10.15.4
 ## Keyboard
 - Voodoops2Controller.kext
   - https://github.com/acidanthera/VoodooPS2/releases
+- Keyboard shortcuts with Karabiner-Elements
+  - https://karabiner-elements.pqrs.org
 
 ## Touchpad
 - VoodooI2C.kext
