@@ -173,7 +173,7 @@
 			<false/>
 		</dict>
 		<key>ScreenResolution</key>
-		<string>1280x1024</string>
+		<string>1920x1080</string>
 		<key>Theme</key>
 		<string>embedded</string>
 		<key>Timezone</key>
@@ -181,6 +181,13 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
+		<key>EDID</key>
+		<dict>
+			<key>Custom</key>
+			<data>AP///////wANrmMTAAAAACUYAQSlHRF4AqyVpFZPoykOUFQAAAABAQEBAQEBAQEBAQEBAQEBNjaAoHA4IEAuHiQAJaUQAAAaXiuAoHA4IEAuHiQAJaUQAAAaAAAA/gBDWVdYWIAxMzNIU0UKAAAAAAACQQGjABAAAAoBCiAgAA==</data>
+			<key>Inject</key>
+			<true/>
+		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
@@ -235,6 +242,13 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+	</dict>
+	<key>SMBIOS</key>
+	<dict>
+		<key>Mobile</key>
+		<false/>
+		<key>Trust</key>
+		<false/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
