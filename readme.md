@@ -21,6 +21,10 @@ Working on MacOS 10.15.4
     - Use [Clover Configurator](https://github.com/CloverHackyColor/CloverBootloader/releases) to do this
   - The DSDT is for MrChromebox's firmware version 4.11.2 (other versions may work but YMMV)
 
+## Issues
+  - USBInjectAll.kext causes sleep issues. A custom SSDT will be needed. Will upload one when I make it.
+    - Removing USBInjectAll.kext will cause USB speeds to drop unusable speeds
+    
 ## Clover Installation Options
 ![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
 
