@@ -24,7 +24,8 @@ Working on MacOS 10.15.4
 ## Issues
   - USBInjectAll.kext causes sleep issues. A custom SSDT will be needed. Will upload one when I make it.
     - Removing USBInjectAll.kext will cause USB speeds to drop unusable speeds
-    
+  - Keyboard backlight is not controllable and turns off after closing the lid
+  
 ## Clover Installation Options
 ![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
 
