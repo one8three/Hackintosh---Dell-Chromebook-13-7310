@@ -21,8 +21,13 @@ Working on MacOS 10.15.4
     - Use [Clover Configurator](https://github.com/CloverHackyColor/CloverBootloader/releases) to do this
   - The DSDT is for MrChromebox's firmware version 4.11.2 (other versions may work but YMMV)
 
-## Issues
-  - Keyboard backlight is not controllable and turns off after closing the lid
+## What's Working: 
+  - Just about everything!
+  
+## What's Not Working / To Do:
+  - Keyboard Backlight Control - turns off after 
+  - Better touch pad movement (Currently 100% usable but just not 100% perfect)
+  - Off-center Apple logo at boot
   
 ## Clover Installation Options
 ![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
