@@ -22,8 +22,6 @@ Working on MacOS 10.15.4
   - The DSDT is for MrChromebox's firmware version 4.11.2 (other versions may work but YMMV)
 
 ## Issues
-  - USBInjectAll.kext causes sleep issues. A custom SSDT will be needed. Will upload one when I make it.
-    - Removing USBInjectAll.kext will cause USB speeds to drop unusable speeds
   - Keyboard backlight is not controllable and turns off after closing the lid
   
 ## Clover Installation Options
@@ -37,6 +35,8 @@ Working on MacOS 10.15.4
 - [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml)
 - SSDT-PLNF.aml
   - https://bitbucket.org/RehabMan/applebacklightfixup/downloads/
+- [SSDT-UIAC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-UIAC.aml)
+  - For injecting proper USB ports
 
 ## List of Required Kexts
 ### Installed from Clover Configurator
