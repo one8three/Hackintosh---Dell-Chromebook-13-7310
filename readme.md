@@ -28,6 +28,7 @@ Working on MacOS 10.15.4
   - Keyboard Backlight Control - turns off after 
   - Better touch pad movement (Currently 100% usable but just not 100% perfect)
   - Off-center Apple logo at boot
+  - MicroSD card reader - will likely be fixed with adjustments to SSDT-UIAC.aml
   
 ## Clover Installation Options
 ![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
