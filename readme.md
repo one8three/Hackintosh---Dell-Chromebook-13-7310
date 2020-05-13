@@ -42,7 +42,7 @@ Working on MacOS 10.15.4
 - SSDT-PLNF.aml
   - https://bitbucket.org/RehabMan/applebacklightfixup/downloads/
 - [SSDT-UIAC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-UIAC.aml)
-  - FFor properly mapped USB ports (internal and external)
+  - For properly mapped USB ports (internal and external) - Not perfect but I don't think it'll cause issues
 
 ## List of Required Kexts
 ### Installed from Clover Configurator
