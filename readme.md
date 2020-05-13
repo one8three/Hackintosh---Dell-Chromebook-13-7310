@@ -25,6 +25,7 @@ Working on MacOS 10.15.4
   - Just about everything!
   
 ## What's Not Working / To Do:
+  - Touchscreen
   - Keyboard Backlight Control - turns off after 
   - Better touch pad movement (Currently 100% usable but just not 100% perfect)
   - Off-center Apple logo at boot
