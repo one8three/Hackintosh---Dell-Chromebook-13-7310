@@ -30,6 +30,8 @@ Working on MacOS 10.15.4
   - Better touch pad movement (Currently 100% usable but just not 100% perfect)
   - Off-center Apple logo at boot
   - MicroSD card reader - will likely be fixed with adjustments to SSDT-UIAC.aml
+  - Clicking and dragging with 1 finger doesn't release until your finger is removed from the trackpad
+    - Temporary fix here: [https://github.com/VoodooI2C/VoodooI2C/issues/290](https://github.com/VoodooI2C/VoodooI2C/issues/290)
   
 ## Clover Installation Options
 ![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
