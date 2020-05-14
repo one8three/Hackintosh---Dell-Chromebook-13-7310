@@ -24,14 +24,20 @@ Working on MacOS 10.15.4
 ## What's Working: 
   - Just about everything!
   
-## What's Not Working / To Do:
-  - Touchscreen
-  - Keyboard Backlight Control - turns off after 
-  - Better touch pad movement (Currently 100% usable but just not 100% perfect)
-  - Off-center Apple logo at boot
-  - MicroSD card reader - will likely be fixed with adjustments to SSDT-UIAC.aml
+## What's Not Working:
+  - Touchscreen - unlikely to be fixed 
+  - Keyboard Backlight Control - turns off after closing the lid
   - Clicking and dragging with 1 finger doesn't release until your finger is removed from the trackpad
     - Temporary fix here: [https://github.com/VoodooI2C/VoodooI2C/issues/290](https://github.com/VoodooI2C/VoodooI2C/issues/290)
+
+
+## To Do:  
+  - Get better trackpad speed (Currently 100% usable but just not 100% perfect)
+    - I'm using [SmoothCursor](https://smoothcursor.com) set to 0.05 to get a speed/acceleration that feels right to me
+  - Get off-center Apple logo at boot to be centered
+    - Setting Clover resolution to 1080p and booting centers the Apple logo but causes major graphical glitches at the login screen
+  - Mapping of the top row keys requires an app. I'd like to do this natively by modifying VoodooPS2.kext
+     - [https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping)
   
 ## Clover Installation Options
 ![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
