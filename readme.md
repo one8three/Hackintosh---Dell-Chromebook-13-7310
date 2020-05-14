@@ -36,7 +36,7 @@ Working on MacOS 10.15.4
     - I'm using [SmoothCursor](https://smoothcursor.com) set to 0.05 to get a speed/acceleration that feels right to me
   - Get off-center Apple logo at boot to be centered
     - Setting Clover resolution to 1080p and booting centers the Apple logo but causes major graphical glitches at the login screen
-  - Mapping of the top row keys requires an app. I'd like to do this natively by modifying VoodooPS2.kext
+  - I'm currently using [Karabiner](https://karabiner-elements.pqrs.org) to map the top row but I'd like to do this natively by modifying VoodooPS2.kext
      - [https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping)
   
 ## Clover Installation Options
