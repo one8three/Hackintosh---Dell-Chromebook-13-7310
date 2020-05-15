@@ -42,6 +42,7 @@ Working on MacOS 10.15.4
   
 ## Clover Installation Options
 ![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
+  - Add FileVault 2 drivers if you plan on using it. I have not confirmed whether or not this works.
 
 ## Clover Config
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
