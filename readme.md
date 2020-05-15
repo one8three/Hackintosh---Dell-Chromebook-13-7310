@@ -17,6 +17,7 @@ Working on MacOS 10.15.4
   - USB mouse (the built in touchpad will not work in the installer)
 
 ## Notes
+  - I'm using Clover to boot
   - You will need to generate your own SMBIOS in the attached config.plist - Use the MacBook Air 7,2 profile 
     - Use [Clover Configurator](https://github.com/CloverHackyColor/CloverBootloader/releases) to do this
   - The DSDT is for MrChromebox's firmware version 4.11.2 (other versions may work but YMMV)
