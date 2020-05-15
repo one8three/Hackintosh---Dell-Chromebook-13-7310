@@ -77,6 +77,9 @@ Working on MacOS 10.15.4
     - https://github.com/alexandred/VoodooI2C/releases
 - VoodooPS2Controller.kext
   - https://github.com/acidanthera/VoodooPS2/releases
+- CPUFriend.kext 
+  - https://github.com/acidanthera/CPUFriend/releases
+- [CPUFriendDataProvider.kext]()
 #
 #
 # 
