@@ -130,3 +130,4 @@ You need swap in a compatible WiFi card - I'll be using a Dell DW1560 so the fol
 - https://tonymacx86.com/
 - https://www.tonymacx86.com/threads/guide-intel-broadwell-nuc5-using-clover-uefi-nuc5i5mhye-nuc5i3myhe-etc.261712/
 - https://github.com/corpnewt/CPUFriendFriend
+- https://dortania.github.io/Getting-Started-With-ACPI/
