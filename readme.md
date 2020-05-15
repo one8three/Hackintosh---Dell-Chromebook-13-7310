@@ -79,7 +79,7 @@ Working on MacOS 10.15.4
   - https://github.com/acidanthera/VoodooPS2/releases
 - CPUFriend.kext 
   - https://github.com/acidanthera/CPUFriend/releases
-- [CPUFriendDataProvider.kext]()
+- [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
 #
 #
 # 
