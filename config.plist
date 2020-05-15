@@ -12,26 +12,6 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMQ==</data>
-					<key>Replace</key>
-					<data>RUgwMQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>RUhDMg==</data>
-					<key>Replace</key>
-					<data>RUgwMg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change _DSM to XDSM</string>
 					<key>Disabled</key>
 					<false/>
@@ -49,16 +29,6 @@
 					<data>R0ZYMA==</data>
 					<key>Replace</key>
 					<data>SUdQVQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change B0D3 to HDAU</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>QjBEMw==</data>
-					<key>Replace</key>
-					<data>SERBVQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -105,9 +75,9 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0</string>
+		<string>kext-dev-mode=1 dart=0 darkwake=0</string>
 		<key>DefaultVolume</key>
-		<string>LastBootedVolume</string>
+		<string>Macintosh HD</string>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverDoRecovery</key>
@@ -117,7 +87,7 @@
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>3</integer>
 	</dict>
 	<key>BootGraphics</key>
 	<dict>
@@ -173,7 +143,7 @@
 			<false/>
 		</dict>
 		<key>ScreenResolution</key>
-		<string>1920x1080</string>
+		<string>1280x1024</string>
 		<key>Theme</key>
 		<string>embedded</string>
 		<key>Timezone</key>
@@ -186,7 +156,7 @@
 			<key>Custom</key>
 			<data>AP///////wANrmMTAAAAACUYAQSlHRF4AqyVpFZPoykOUFQAAAABAQEBAQEBAQEBAQEBAQEBNjaAoHA4IEAuHiQAJaUQAAAaXiuAoHA4IEAuHiQAJaUQAAAaAAAA/gBDWVdYWIAxMzNIU0UKAAAAAAACQQGjABAAAAoBCiAgAA==</data>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -194,7 +164,7 @@
 			<false/>
 		</dict>
 		<key>ig-platform-id</key>
-		<string>0x16160002</string>
+		<string>0x16260006</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -245,10 +215,52 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BiosReleaseDate</key>
+		<string>02/05/2020</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>MBA71.88Z.F000.B00.2002051744</string>
+		<key>Board-ID</key>
+		<string>Mac-937CB26E2E02BB01</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>C026506004NG91QAD</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>1.0</string>
+		<key>ChassisAssetTag</key>
+		<string>Air-Enclosure</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x09</string>
+		<key>EfiVersion</key>
+		<string>193.0.0.0.0</string>
+		<key>Family</key>
+		<string>MacBook Air</string>
+		<key>FirmwareFeatures</key>
+		<string>0xE00FE137</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
 		<key>Mobile</key>
-		<false/>
-		<key>Trust</key>
-		<false/>
+		<true/>
+		<key>PlatformFeature</key>
+		<string>0xFFFF</string>
+		<key>ProductName</key>
+		<string>MacBookAir7,2</string>
+		<key>SerialNumber</key>
+		<string>C02ST0VPG940</string>
+		<key>SmUUID</key>
+		<string>5B98F3FE-A5E8-4A19-B989-8F7152592F7D</string>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
