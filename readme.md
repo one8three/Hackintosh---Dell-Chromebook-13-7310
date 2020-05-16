@@ -39,6 +39,7 @@ Working on MacOS 10.15.4
     - Setting Clover resolution to 1080p and booting centers the Apple logo but causes major graphical glitches at the login screen
   - I'm currently using [Karabiner](https://karabiner-elements.pqrs.org) to map the top row but I'd like to do this natively by modifying VoodooPS2.kext
      - [https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping)
+  - Maybe move to OpenCore?
   
 ## Clover Installation Options
 ![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
