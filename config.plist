@@ -226,7 +226,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C026506004NG91QAD</string>
+		<string>XXXXXXXXXXXXX</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -256,9 +256,9 @@
 		<key>ProductName</key>
 		<string>MacBookAir7,2</string>
 		<key>SerialNumber</key>
-		<string>C02ST0VPG940</string>
+		<string>XXXXXXXXXX</string>
 		<key>SmUUID</key>
-		<string>5B98F3FE-A5E8-4A19-B989-8F7152592F7D</string>
+		<string>XXXXXXXXXXX</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
