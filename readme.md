@@ -33,8 +33,7 @@ Working on MacOS 10.15.4
 
 
 ## To Do:  
-  - Get better trackpad speed (Currently 100% usable but just not 100% perfect)
-    - I'm using [SmoothCursor](https://smoothcursor.com) set to 0.05 to get a speed/acceleration that feels right to me
+  - Get proper trackpad scaling to make the Notification Center gesture work (not a priority for me so probably won't get done)
   - Get off-center Apple logo at boot to be centered
     - Setting Clover resolution to 1080p and booting centers the Apple logo but causes major graphical glitches at the login screen
     - Can be fixed by switching to OpenCore and setting to a lower resolution
@@ -78,6 +77,7 @@ Working on MacOS 10.15.4
   - https://github.com/acidanthera/BrcmPatchRAM/releases
 - VoodooI2C.kext
   - VoodooI2CSynaptics.kext
+    - Use my modified one [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2CSynaptics.kext.zip) for better speed
     - https://github.com/alexandred/VoodooI2C/releases
 - VoodooPS2Controller.kext
   - https://github.com/acidanthera/VoodooPS2/releases
@@ -97,8 +97,9 @@ Working on MacOS 10.15.4
 
 ## Touchpad
 - VoodooI2C.kext
-- VoodooI2CSynaptics.kext 
   - https://github.com/alexandred/VoodooI2C/releases
+- [VoodooI2CSynaptics.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2CSynaptics.kext.zip) 
+  - This is my modified one for better speed
 - The required "Windows" edits are applied to the dsdt.aml in this repo
 
 ## Sound
