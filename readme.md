@@ -11,7 +11,7 @@ Working on MacOS 10.15.4
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A compatible WiFi card
-    - If you're planning on booting an additional OS I recommend a Dell DW1560 - for other compatible cards, do your own research
+    - The Dell DW1560 works in MacOS, Windows & Ubuntu
   - MacOS installer flash drive 
     - There are plenty of guides on how to make this so that won't be covered here
   - USB mouse (the built in touchpad will not work in the installer)
