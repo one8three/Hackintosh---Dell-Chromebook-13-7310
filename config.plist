@@ -34,7 +34,7 @@
 					<key>Comment</key>
 					<string>change SYNA0000 to SYNA2B33</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>U1lOQTAwMDA=</data>
 					<key>Replace</key>
