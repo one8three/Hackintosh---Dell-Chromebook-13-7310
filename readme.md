@@ -30,6 +30,7 @@ Working on MacOS 10.15.4
   - Keyboard Backlight Control - turns off after closing the lid
   - Clicking and dragging with 1 finger doesn't release until your finger is removed from the trackpad
     - Temporary fix here: [https://github.com/VoodooI2C/VoodooI2C/issues/290](https://github.com/VoodooI2C/VoodooI2C/issues/290)
+  - Notification Center gesture (sliding in with 2 finger from the right)
 
 
 ## To Do:  
