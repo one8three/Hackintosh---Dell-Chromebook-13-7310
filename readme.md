@@ -58,13 +58,17 @@ Working on MacOS 10.15.4
   - For properly mapped USB ports (internal and external) - Not perfect but I don't think it'll cause issues
 - [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml?raw=true)
   - For proper CPU power management
+- SSDT-USB.aml
+  - For proper USB mapping
+- SSDT-SBUS-MCHC.aml
+- SSDT-HPET.aml
+
   
 ## List of Required Kexts
 ### Installed from Clover Configurator
 - AirportBrcmFixup.kext
 - AppleALC.kext
 - Lilu.kext
-- USBInjectAll.kext
 - WhateverGreen.kext
 - VirtualSMC.kext
   - SMCBatteryManager.kext
