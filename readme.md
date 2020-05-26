@@ -26,19 +26,17 @@ Working on MacOS 10.15.4
   - Just about everything!
   
 ## What's Not Working:
-  - Touchscreen - unlikely to be fixed 
+  - Touchscreen - unlikely to be fixed
   - Keyboard Backlight Control - turns off after closing the lid
-  - Clicking and dragging with 1 finger doesn't release until your finger is removed from the trackpad
-    - Temporary fix here: [https://github.com/VoodooI2C/VoodooI2C/issues/290](https://github.com/VoodooI2C/VoodooI2C/issues/290)
-  - Notification Center gesture (sliding in with 2 finger from the right)
+  - Occasional trackpad click stick after waking from sleep
+    - Likely caused by this temporary fix to VoodooInput here: [https://github.com/VoodooI2C/VoodooI2C/issues/290](https://github.com/VoodooI2C/VoodooI2C/issues/290)
 
 
 ## To Do:  
-  - Get proper trackpad scaling to make the Notification Center gesture work (not a priority for me so probably won't get done)
   - Get off-center Apple logo at boot to be centered
     - Setting Clover resolution to 1080p and booting centers the Apple logo but causes major graphical glitches at the login screen
     - Can be fixed by switching to OpenCore and setting to a lower resolution
-  - I'm currently using [Karabiner](https://karabiner-elements.pqrs.org) to map the top row but I'd like to do this natively by modifying VoodooPS2.kext
+  - I'm currently using [Karabiner](https://karabiner-elements.pqrs.org) to map the top row but I'd like to do this natively by modifying VoodooPS2controller.kext
      - [https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping)
   - Maybe move to OpenCore?
   
