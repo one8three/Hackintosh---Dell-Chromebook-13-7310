@@ -99,11 +99,9 @@ Working on MacOS 10.15.4
   - https://karabiner-elements.pqrs.org
 
 ## Touchpad
-- VoodooI2C.kext
-  - https://github.com/alexandred/VoodooI2C/releases
-- [VoodooI2CSynaptics.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2CSynaptics.kext.zip) 
-  - This is my modified one for better speed
-- The required "Windows" edits are applied to the dsdt.aml in this repo
+- [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip)
+  - VoodooI2CSynaptics.kext 
+  - This is my modified one for appropriate sensitivity
 
 ## Sound
 - AppleALC.kext
