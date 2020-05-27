@@ -35,10 +35,7 @@ Working on MacOS 10.15.4
 
 
 ## To Do:  
-
-  - I'm currently using [Karabiner](https://karabiner-elements.pqrs.org) to map the top row but I'd like to do this natively by modifying VoodooPS2controller.kext
-     - [https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping)
-  
+  - Keyboard backlight control   
 
 ## Clover Config
   - [config.plist](Coming soon....)
