@@ -208,52 +208,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>KBLT to KKCL</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>S0JMVA==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Replace</key>
-				<data>S0tDTA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>KBQC to KKQC</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>S0JRQw==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Replace</key>
-				<data>S0tRQw==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>KBCM to KKCM</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>S0JDTQ==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>Replace</key>
-				<data>S0tDTQ==</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>_DSM to XDSM</string>
 				<key>Enabled</key>
 				<false/>
