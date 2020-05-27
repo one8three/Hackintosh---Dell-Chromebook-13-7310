@@ -38,14 +38,14 @@ Working on MacOS 10.15.4
   - Keyboard backlight control   
 
 ## Clover Config
-  - [config.plist](Coming soon....)
-    - You will need to generate your own SMBIOS section - use a Macbook Air 7,2 profile - 
+  - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
+    - You will need to generate your own SMBIOS section with GenSMBIOS - use a Macbook Air 7,2 profile.
 
 ## Full list of DSDT / SSDT files
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
- - To expose the embedded controller to MacOS
+  - Exposes the embedded controller to MacOS
 - [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
- - Enabled LCD backlight control
+  - Enables LCD backlight control
 - [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml?raw=true)
   - Enables proper CPU power management
 - [SSDT-USB.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-USB.aml)
@@ -72,7 +72,7 @@ Working on MacOS 10.15.4
   - https://github.com/acidanthera/BrcmPatchRAM/releases
 - VoodooI2C.kext
   - VoodooI2CSynaptics.kext
-  - Use my modified versions of these kexts [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip) for appropriate sensitivity
+  - Use my modified versions of these kexts [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip) for appropriate Trackpad sensitivity
     - https://github.com/alexandred/VoodooI2C/releases
 - VoodooPS2Controller.kext
   - https://github.com/acidanthera/VoodooPS2/releases
@@ -81,7 +81,8 @@ Working on MacOS 10.15.4
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
 
 ### Post-Install
-- Install LogoutHook.command following the directions found in the Utilities folder of the OpenCore download
+- Setup LogoutHook.command following the directions found in the Utilities folder of the OpenCore download
+- Install [Karabiner](https://karabiner-elements.pqrs.org) to map top row keyboard shortcuts
 #
 #
 # 
@@ -93,15 +94,15 @@ Working on MacOS 10.15.4
 - Top row keyboard shortcuts with Karabiner-Elements
   - https://karabiner-elements.pqrs.org
 
-## Touchpad
+## Trackpad
 - [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip)
-  - VoodooI2CSynaptics.kext 
-  - This is my modified one for appropriate sensitivity
+  - VoodooI2CSynaptics.kext (Included with the above download)
+  - This is a custom version, modified for appropriate trackpad sensitivity
 
 ## Sound
 - AppleALC.kext
   - https://github.com/acidanthera/applealc/releases
-- Audio layout 3
+- Audio layout 3 (already in config.plist)
 
 ## LCD Backlight Control
 - SSDT-PNLF.aml
