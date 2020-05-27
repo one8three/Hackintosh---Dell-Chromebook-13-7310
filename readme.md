@@ -1,8 +1,7 @@
 # Dell Chromebook 13 7310 Hackintosh
-#
 # Updated for OpenCore! 
 5/26/2020
-#
+
 This is NOT meant to be a guide or walkthrough but merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
 
 Working on MacOS 10.15.4
@@ -43,13 +42,14 @@ Working on MacOS 10.15.4
     - You will need to generate your own SMBIOS section - use a Macbook Air 7,2 profile - 
 
 ## Full list of DSDT / SSDT files
+- [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
+ - To expose the embedded controller to MacOS
 - [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
-- [SSDT-UIAC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-UIAC.aml)
-  - For properly mapped USB ports (internal and external) - Not perfect but I don't think it'll cause issues
+ - Enabled LCD backlight control
 - [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml?raw=true)
-  - For proper CPU power management
+  - Enables proper CPU power management
 - [SSDT-USB.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-USB.aml)
-  - For proper USB mapping
+  - Properly maps USB ports, Micro SD card reader, webcam, and bluetooth
 - [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
 - [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
 
