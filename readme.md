@@ -20,7 +20,8 @@ Working on MacOS 10.15.4
   - USB mouse (the built in touchpad will not work in the installer)
 
 ## Notes
-  - I'm now using OpenCore to boot! For Clover see the Clover branch
+  - This is all made for [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) 0.5.8
+    - Clover is no longer used here but old data can be found in the Clover branch.
   - You will need to generate your own SMBIOS in the attached config.plist - Use the MacBook Air 7,2 profile 
     - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - The SSDTs are made from version 4.11.2 MrChromebox's firmware (other versions may work but YMMV)
@@ -30,7 +31,7 @@ Working on MacOS 10.15.4
   
 ## What's Not Working:
   - Touchscreen - unlikely to be fixed
-  - Keyboard Backlight Control - turns off after closing the lid
+  - Keyboard backlight control - also turns off after closing the lid
   - Occasional trackpad click stick after waking from sleep
     - Likely caused by this temporary fix to VoodooInput here: [https://github.com/VoodooI2C/VoodooI2C/issues/290](https://github.com/VoodooI2C/VoodooI2C/issues/290)
 
@@ -79,6 +80,9 @@ Working on MacOS 10.15.4
 - CPUFriend.kext 
   - https://github.com/acidanthera/CPUFriend/releases
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
+
+### Post-Install
+- Install LogoutHook.command following the directions found in the Utilities folder of the OpenCore download
 #
 #
 # 
