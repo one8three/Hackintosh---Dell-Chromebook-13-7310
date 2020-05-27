@@ -2,12 +2,11 @@
 #
 # Updated for OpenCore! 
 5/26/2020
-
+#
 This is NOT meant to be a guide or walkthrough but merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
 
 Working on MacOS 10.15.4
-
-
+#
 # Requirements
   - Core i3 or Core i5 Processor 
     - Will NOT work with the Celeron model
