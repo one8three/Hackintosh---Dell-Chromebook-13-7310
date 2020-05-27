@@ -45,16 +45,15 @@ Working on MacOS 10.15.4
     - You will need to generate your own SMBIOS section - use a Macbook Air 7,2 profile - 
 
 ## Full list of DSDT / SSDT files
-- SSDT-PLNF.aml
-  - https://bitbucket.org/RehabMan/applebacklightfixup/downloads/
+- [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
 - [SSDT-UIAC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-UIAC.aml)
   - For properly mapped USB ports (internal and external) - Not perfect but I don't think it'll cause issues
 - [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml?raw=true)
   - For proper CPU power management
-- SSDT-USB.aml
+- [SSDT-USB.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-USB.aml)
   - For proper USB mapping
-- SSDT-SBUS-MCHC.aml
-- SSDT-HPET.aml
+- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
+- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
 
   
 ## List of Required Kexts
