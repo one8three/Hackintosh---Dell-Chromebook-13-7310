@@ -1,6 +1,6 @@
 # Dell Chromebook 13 7310 Hackintosh
 #
-# Updated for OpenCore!
+# Updated for OpenCore! 5/26/2020
 
 This is NOT meant to be a guide or walkthrough but merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
 
