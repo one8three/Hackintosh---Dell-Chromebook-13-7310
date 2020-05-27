@@ -3,7 +3,7 @@
 
 This is NOT meant to be a guide or walkthrough but merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
 
-Confirmed working on MacOS 10.15.4
+Confirmed working on MacOS 10.15.5
 #
 ### Basic steps:
  - Create installer flashdrive with OpenCore
