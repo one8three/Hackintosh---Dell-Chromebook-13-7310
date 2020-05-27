@@ -1,4 +1,6 @@
 # Dell Chromebook 13 7310 Hackintosh
+#
+# Updated for OpenCore!
 
 This is NOT meant to be a guide or walkthrough but merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
 
@@ -17,10 +19,10 @@ Working on MacOS 10.15.4
   - USB mouse (the built in touchpad will not work in the installer)
 
 ## Notes
-  - I'm using Clover to boot
+  - I'm now using OpenCore to boot! For Clover see the Clover branch
   - You will need to generate your own SMBIOS in the attached config.plist - Use the MacBook Air 7,2 profile 
-    - Use [Clover Configurator](https://github.com/CloverHackyColor/CloverBootloader/releases) to do this
-  - The DSDT is for MrChromebox's firmware version 4.11.2 (other versions may work but YMMV)
+    - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
+  - The SSDTs are made from version 4.11.2 MrChromebox's firmware (other versions may work but YMMV)
 
 ## What's Working: 
   - Just about everything!
@@ -33,33 +35,22 @@ Working on MacOS 10.15.4
 
 
 ## To Do:  
-  - Get off-center Apple logo at boot to be centered
-    - Setting Clover resolution to 1080p and booting centers the Apple logo but causes major graphical glitches at the login screen
-    - Can be fixed by switching to OpenCore and setting to a lower resolution
-  - I'm currently using [Karabiner](https://karabiner-elements.pqrs.org) to map the top row but I'd like to do this natively by modifying VoodooPS2controller.kext
-     - [https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping)
-  - Maybe move to OpenCore?
-  
-## Clover Installation Options
-![image](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Clover_Setup.jpg)
-  - Add FileVault 2 drivers if you plan on using it. I have not confirmed whether or not this works.
+  - Keyboard backlight control   
 
 ## Clover Config
-  - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
-    - You will need to generate your own SMBIOS section - use the Macbook Air 7,2 profile
+  - [config.plist](Coming soon....)
+    - You will need to generate your own SMBIOS section - use a Macbook Air 7,2 profile - 
 
 ## Full list of DSDT / SSDT files
-- [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml)
-- SSDT-PLNF.aml
-  - https://bitbucket.org/RehabMan/applebacklightfixup/downloads/
+- [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
 - [SSDT-UIAC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-UIAC.aml)
   - For properly mapped USB ports (internal and external) - Not perfect but I don't think it'll cause issues
 - [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml?raw=true)
   - For proper CPU power management
-- SSDT-USB.aml
+- [SSDT-USB.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-USB.aml)
   - For proper USB mapping
-- SSDT-SBUS-MCHC.aml
-- SSDT-HPET.aml
+- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
+- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
 
   
 ## List of Required Kexts
@@ -80,7 +71,7 @@ Working on MacOS 10.15.4
   - https://github.com/acidanthera/BrcmPatchRAM/releases
 - VoodooI2C.kext
   - VoodooI2CSynaptics.kext
-    - Use my modified one [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2CSynaptics.kext.zip) for better speed
+  - Use my modified versions of these kexts [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip) for appropriate sensitivity
     - https://github.com/alexandred/VoodooI2C/releases
 - VoodooPS2Controller.kext
   - https://github.com/acidanthera/VoodooPS2/releases
@@ -95,7 +86,7 @@ Working on MacOS 10.15.4
 ## Keyboard
 - Voodoops2Controller.kext
   - https://github.com/acidanthera/VoodooPS2/releases
-- Keyboard shortcuts with Karabiner-Elements
+- Top row keyboard shortcuts with Karabiner-Elements
   - https://karabiner-elements.pqrs.org
 
 ## Touchpad
