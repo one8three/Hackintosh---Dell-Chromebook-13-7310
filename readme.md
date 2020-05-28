@@ -89,6 +89,7 @@ Placed in EFI/EFI/OC/Kexts
 ### Post-Install
 - Setup LogoutHook.command following the directions found in the Utilities folder of the OpenCore download
 - Install [Karabiner](https://karabiner-elements.pqrs.org) to map top row keyboard shortcuts
+- Disable hibernate with "sudo pmset -a hibernatemode 0"
 #
 #
 # 
