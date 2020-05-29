@@ -12,6 +12,9 @@ Confirmed working on MacOS 10.15.5
  - Place the SSDTs, kexts, and config.plist in appropriate locations in your EFI partition
  - Install MacOS
  - Install OpenCore to internal SSD
+ - Disable force click in trackpad settings
+ - Install [Karabiner](https://karabiner-elements.pqrs.org) to map top row keyboard shortcuts
+ - Disable hibernate with "sudo pmset -a hibernatemode 0"
  - Install LogoutHook.command according to directions in Utilities folder of the OpenCore download
 
 If you want a full guide, use this: https://dortania.github.io/vanilla-laptop-guide/
@@ -27,7 +30,6 @@ All of the SSDTs and the config file were created through this guide.
     - The Dell DW1560 works in MacOS, Windows & Ubuntu
   - MacOS installer flash drive 
     - There are plenty of guides on how to make this so that won't be covered here
-  - USB mouse (the built in touchpad will not work in the installer)
 
 ## Notes
   - This is all made for [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) 0.5.8
@@ -88,8 +90,10 @@ Placed in EFI/EFI/OC/Kexts
 
 ### Post-Install
 - Setup LogoutHook.command following the directions found in the Utilities folder of the OpenCore download
+- Disable force click in trackpad settings
 - Install [Karabiner](https://karabiner-elements.pqrs.org) to map top row keyboard shortcuts
 - Disable hibernate with "sudo pmset -a hibernatemode 0"
+
 #
 #
 # 
