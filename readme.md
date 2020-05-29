@@ -45,8 +45,7 @@ All of the SSDTs and the config file were created through this guide.
   - Touchscreen - unlikely to be fixed
   - Keyboard backlight control - also turns off after closing the lid
   - Occasional trackpad click stick after waking from sleep
-    - Likely caused by using this temporary fix to VoodooInput here: [https://github.com/VoodooI2C/VoodooI2C/issues/290](https://github.com/VoodooI2C/VoodooI2C/issues/290)
-
+    - Possibly fixed with latest custom [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip)
 
 ## To Do:  
   - Keyboard backlight control   
@@ -138,8 +137,6 @@ You need swap in a compatible WiFi card - I'll be using a Dell DW1560 so the fol
 - https://github.com/RehabMan
 - https://www.insanelymac.com/
 - https://reddit.com/r/hackintosh
-- https://tonymacx86.com/
-- https://www.tonymacx86.com/threads/guide-intel-broadwell-nuc5-using-clover-uefi-nuc5i5mhye-nuc5i3myhe-etc.261712/
 - https://github.com/corpnewt/CPUFriendFriend
 - https://github.com/TheRandMan/VoodooI2C
-- https://dortania.github.io/Getting-Started-With-ACPI/
+- https://dortania.github.io/vanilla-laptop-guide/
