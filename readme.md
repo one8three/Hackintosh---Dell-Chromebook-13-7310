@@ -6,7 +6,8 @@ This is NOT meant to be a guide or walkthrough but merely a dump of files and no
 Confirmed working on MacOS 10.15.5
 #
 ### Basic steps:
- - Create installer flashdrive with OpenCore
+ - Install MrChromebox custom [UEFI firmware](https://mrchromebox.tech/#fwscript)
+ - Create MacOS installer flashdrive with OpenCore bootloader
  - Download SSDTs, kexts, and config.plist from this repo
  - Generate SMBIOS and add it to the config.plist
  - Place the SSDTs, kexts, and config.plist in appropriate locations in your EFI partition
@@ -34,7 +35,7 @@ All of the SSDTs and the config file were created through this guide.
 ## Notes
   - This is all made for [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) 0.5.8
     - Clover is no longer used here but old Clover data can be found in the Clover branch.
-  - You will need to generate your own SMBIOS in the attached config.plist - Use the MacBook Air 7,2 profile 
+  - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile 
     - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - The SSDTs are made from version 4.11.2 MrChromebox's firmware (other versions may work but YMMV)
 
