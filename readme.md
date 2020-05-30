@@ -46,7 +46,7 @@ All of the SSDTs and the config file were created through this guide.
   - Touchscreen - unlikely to be fixed
   - Keyboard backlight control - also turns off after closing the lid
   - Occasional trackpad click stick after waking from sleep
-    - Possibly fixed with latest custom [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip)
+    - Possibly fixed with latest custom [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip)
 
 ## To Do:  
   - Keyboard backlight control   
@@ -56,6 +56,7 @@ All of the SSDTs and the config file were created through this guide.
     - You will need to generate your own SMBIOS section with GenSMBIOS - use a Macbook Air 7,2 profile.
 
 ## Full list of DSDT / SSDT files
+Placed in EFI/EFI/OC/ACPI
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
   - Exposes the embedded controller to MacOS
 - [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
@@ -70,7 +71,6 @@ All of the SSDTs and the config file were created through this guide.
   
 ## List of Required Kexts
 Placed in EFI/EFI/OC/Kexts
-- [AirportBrcmFixup.kext](https://github.com/acidanthera/airportbrcmfixup/releases)
 - [AppleALC.kext](https://github.com/acidanthera/applealc/releases)
 - [Lilu.kext](https://github.com/acidanthera/lilu/releases)
 - [WhateverGreen.kext](https://github.com/acidanthera/whatevergreen/releases)
@@ -78,15 +78,20 @@ Placed in EFI/EFI/OC/Kexts
   - SMCBatteryManager.kext
   - SMCProcessor.kext
   - SMCSuperIO.kext
-- [BrcmPatchRAM3.kext](https://github.com/acidanthera/BrcmPatchRAM/releases)  
-  - BrcmBluetoothInjector.kext
-  - BrcmFirmwareData.kext
-- [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip) 
+- [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip) 
   - VoodooI2CSynaptics.kext
   - This is a modified VoodooI2C.kext for appropriate Trackpad sensitivity
 - [VoodooPS2Controller.kext](https://github.com/acidanthera/VoodooPS2/releases)
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
+
+## Kexts for Dell DW1560 wifi
+Placed in EFI/EFI/OC/Kexts 
+ - [AirportBrcmFixup.kext](https://github.com/acidanthera/airportbrcmfixup/releases)
+ - [BrcmPatchRAM3.kext](https://github.com/acidanthera/BrcmPatchRAM/releases)  
+  - BrcmBluetoothInjector.kext
+  - BrcmFirmwareData.kext
+ 
 
 ### Post-Install
 - Setup LogoutHook.command following the directions found in the Utilities folder of the OpenCore download
@@ -106,7 +111,7 @@ Placed in EFI/EFI/OC/Kexts
   - https://karabiner-elements.pqrs.org
 
 ### Trackpad
-- [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C.zip)
+- [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip)
   - VoodooI2CSynaptics.kext (Included with the above download)
   - This is a custom version, modified for appropriate trackpad sensitivity
 
@@ -137,6 +142,7 @@ You need swap in a compatible WiFi card - I'll be using a Dell DW1560 so the fol
 - https://github.com/MrChromebox/
 - https://github.com/RehabMan
 - https://www.insanelymac.com/
+- https://www.tonymacx86.com/
 - https://reddit.com/r/hackintosh
 - https://github.com/corpnewt/CPUFriendFriend
 - https://github.com/TheRandMan/VoodooI2C
