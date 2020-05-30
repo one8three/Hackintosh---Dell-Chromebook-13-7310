@@ -50,7 +50,7 @@ All of the SSDTs and the config file were created through this guide.
 
 ## To Do:  
   - Keyboard backlight control
-   - Will likely need a custom kext or modifications to VoodooPS2Controller.kext but doesn't seem difficult for somebody who knows what they're doing. Unfortunately this is above my skill level.
+    - Seems likely need a custom kext or modifications to VoodooPS2Controller.kext but doesn't seem difficult for somebody who knows what they're doing. Unfortunately this is very likely above my skill level. If anyone sees this with the knowledge to get this done, please reach out!
 
 ## OpenCore Config
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
