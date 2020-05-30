@@ -49,7 +49,8 @@ All of the SSDTs and the config file were created through this guide.
     - Possibly fixed with latest custom [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip)
 
 ## To Do:  
-  - Keyboard backlight control   
+  - Keyboard backlight control
+   - Will likely need a custom kext or modifications to VoodooPS2Controller.kext but doesn't seem difficult for somebody who knows what they're doing. Unfortunately this is above my skill level.
 
 ## OpenCore Config
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
@@ -89,8 +90,8 @@ Placed in EFI/EFI/OC/Kexts
 Placed in EFI/EFI/OC/Kexts 
  - [AirportBrcmFixup.kext](https://github.com/acidanthera/airportbrcmfixup/releases)
  - [BrcmPatchRAM3.kext](https://github.com/acidanthera/BrcmPatchRAM/releases)  
-  - BrcmBluetoothInjector.kext
-  - BrcmFirmwareData.kext
+   - BrcmBluetoothInjector.kext
+   - BrcmFirmwareData.kext
  
 
 ### Post-Install
