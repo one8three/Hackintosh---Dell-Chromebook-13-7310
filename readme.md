@@ -100,43 +100,10 @@ Placed in EFI/EFI/OC/Kexts
 - Install [Karabiner](https://karabiner-elements.pqrs.org) to map top row keyboard shortcuts
 - Disable hibernate with "sudo pmset -a hibernatemode 0"
 
-#
-#
-# 
-#
-# What does what?
-### Keyboard
-- Voodoops2Controller.kext
-  - https://github.com/acidanthera/VoodooPS2/releases
-- Top row keyboard shortcuts with Karabiner-Elements
-  - https://karabiner-elements.pqrs.org
 
-### Trackpad
-- [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip)
-  - VoodooI2CSynaptics.kext (Included with the above download)
-  - This is a custom version, modified for appropriate trackpad sensitivity
+#
 
-### Sound
-- AppleALC.kext
-  - https://github.com/acidanthera/applealc/releases
-- Audio layout 3 (already in config.plist)
 
-### LCD Backlight Control
-- SSDT-PNLF.aml
-  - https://bitbucket.org/RehabMan/applebacklightfixup/downloads/
-
-### WiFi
-You need swap in a compatible WiFi card - I'll be using a Dell DW1560 so the following kexts are required
-- AirportBrcmFixup.kext
-- BrcmBluetoothInjector.kext
-- BrcmFirmwareData.kext
-- BrcmPatchRAM3.kext
-  - https://github.com/acidanthera/BrcmPatchRAM/releases
-  - https://github.com/acidanthera/AirportBrcmFixup/releases
-#
-#
-#
-#
 ## Credits & Sources (in no particular order and maybe missing some)
 - https://github.com/acidanthera/
 - https://github.com/alexandred/
