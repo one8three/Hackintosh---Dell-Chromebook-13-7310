@@ -1,13 +1,13 @@
 # Dell Chromebook 13 7310 Hackintosh
 ### Now using OpenCore! 
 
-This is NOT meant to be a guide or walkthrough but merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
+This is not meant to be a guide or walkthrough but merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
 
-Confirmed working on MacOS 10.15.5
+Confirmed working on MacOS Catalina 10.15.5
 #
 ### Basic steps:
  - Install MrChromebox custom [UEFI firmware](https://mrchromebox.tech/#fwscript)
- - Create MacOS installer flashdrive with OpenCore bootloader
+ - Create MacOS installer flashdrive with [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) bootloader
  - Download SSDTs, kexts, and config.plist from this repo
  - Generate SMBIOS and add it to the config.plist
  - Place the SSDTs, kexts, and config.plist in appropriate locations in your EFI partition
@@ -50,14 +50,15 @@ All of the SSDTs and the config file were created through this guide.
 
 ## To Do:  
   - Keyboard backlight control
-    - Seems likely need a custom kext or modifications to VoodooPS2Controller.kext but doesn't seem difficult for somebody who knows what they're doing. Unfortunately this is very likely above my skill level. If anyone sees this with the knowledge to get this done, please reach out!
+    - From my research this will likely need a custom kext or modifications to VoodooPS2Controller.kext and a SSDT. From what I can tell, it wouldn't be difficult for somebody who knows what they're doing but unfortunately, it's well above my skill level. If anyone sees this with the knowledge to get this done, please reach out! I have the location of the backlight control in the DSDT and it's pretty straightforward on what it does but I don't know how to implement it.
 
 ## OpenCore Config
+Place this in EFI/EFI/OC/
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
-    - You will need to generate your own SMBIOS section with GenSMBIOS - use a Macbook Air 7,2 profile.
+    - You will need to generate your own SMBIOS section with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a Macbook Air 7,2 profile.
 
-## Full list of DSDT / SSDT files
-Placed in EFI/EFI/OC/ACPI
+## SSDT files
+Place these in EFI/EFI/OC/ACPI
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
   - Exposes the embedded controller to MacOS
 - [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
@@ -70,8 +71,8 @@ Placed in EFI/EFI/OC/ACPI
 - [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
 
   
-## List of Required Kexts
-Placed in EFI/EFI/OC/Kexts
+## Required Kexts
+Placed these in EFI/EFI/OC/Kexts
 - [AppleALC.kext](https://github.com/acidanthera/applealc/releases)
 - [Lilu.kext](https://github.com/acidanthera/lilu/releases)
 - [WhateverGreen.kext](https://github.com/acidanthera/whatevergreen/releases)
@@ -105,6 +106,7 @@ Placed in EFI/EFI/OC/Kexts
 
 
 ## Credits & Sources (in no particular order and maybe missing some)
+- Apple
 - https://github.com/acidanthera/
 - https://github.com/alexandred/
 - https://github.com/MrChromebox/
