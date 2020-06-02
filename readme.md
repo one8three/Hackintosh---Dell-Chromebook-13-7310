@@ -34,7 +34,8 @@ All of the SSDTs and the config file were created through this guide.
     - There are plenty of guides on how to make this so that won't be covered here
 
 ## Notes
-  - This is all made for [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) 0.5.8
+  - This is all made for [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) 0.5.9
+    - Be sure to use the same version
     - Clover is no longer used here but old Clover data can be found in the Clover branch.
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile 
     - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
@@ -57,6 +58,14 @@ All of the SSDTs and the config file were created through this guide.
 Place this in EFI/EFI/OC/
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
     - You will need to generate your own SMBIOS section with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a Macbook Air 7,2 profile.
+    
+## OpenCore Drivers
+These are included with the OpenCore download unless noted otherwise. They should be in EFI/EFI/OC/Drivers
+- AudioDxe.efi
+- OpenCanopy.efi
+- Ps2KeyboardDxe.efi
+- [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
+- OpenRuntime.efi
 
 ## SSDT files
 Place these in EFI/EFI/OC/ACPI
