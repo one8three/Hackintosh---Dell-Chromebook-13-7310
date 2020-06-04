@@ -19,16 +19,16 @@ Confirmed working on MacOS Catalina 10.15.5
 ### Notes
   - This is all made for [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9)
     - Be sure to use the same version
-  - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile 
+  - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile
     - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
-  - The SSDTs are made from version 4.11.2 of MrChromebox's firmware (other versions may work but YMMV)
-  - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off.
+  - The DSDT/SSDTs are made from version 4.11.2 of MrChromebox's firmware (other versions may work but YMMV)
+  - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
 
 ### What's Working: 
   - Just about everything!
   
 ### What's Not Working:
-  - Touchscreen - highly unlikely to be get this working. Fairly uncommon to have one on this device anyway.
+  - Touchscreen - highly unlikely that this will ever work - fairly uncommon to have one on this device anyway
   - Occasionally the trackpad will get stuck in a click
     - I've been able to clear it by "rubbing" the trackpad with my palm
     - Possibly fixed with latest [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip)
@@ -39,11 +39,11 @@ Confirmed working on MacOS Catalina 10.15.5
 #
 
 ## Basic Installation steps:
- - Install [MrChromebox custom UEFI firmware](https://mrchromebox.tech/#fwscript)
- - Create MacOS installer flashdrive with [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) bootloader
- - Download [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files) from this repo
- - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate a unique SMBIOS and add it to the config.plist
- - Place the required files in their appropriate locations in your EFI partition
+ - Install [MrChromebox UEFI firmware](https://mrchromebox.tech/#fwscript)
+ - Create MacOS installer flashdrive with [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) bootloader
+ - Download the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
+ - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)to generate a unique SMBIOS and add it to the config.plist
+ - Place the required files in their appropriate locations on your EFI partition
  - Install MacOS
  - Install OpenCore to the internal SSD
  - Disable force click in trackpad system preferences
@@ -53,8 +53,8 @@ Confirmed working on MacOS Catalina 10.15.5
  - Disable hibernate with "sudo pmset -a hibernatemode 0"
  - Install LogoutHook.command according to directions in Utilities folder of the OpenCore download
 
-If you want a full guide, use this: https://dortania.github.io/vanilla-laptop-guide/
-Most of the files in this repor were created through this guide.
+If you want a full guide, use this: https://dortania.github.io/vanilla-laptop-guide/ -
+most of the files in this repo were created using this guide
 #
 ## Required Files
 
@@ -65,14 +65,14 @@ Place this in EFI/EFI/OC/
     
 ### OpenCore Drivers
 These are included with the OpenCore download unless noted otherwise.
-These should be in EFI/EFI/OC/Drivers
+You'll find them in EFI/EFI/OC/Drivers
 - AudioDxe.efi
 - OpenCanopy.efi
 - Ps2KeyboardDxe.efi
 - [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
 - OpenRuntime.efi
 
-### SSDT files
+### DSDT/SSDT files
 Place these in EFI/EFI/OC/ACPI
 - [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml)
   - Adds control for keyboard backlight
@@ -88,7 +88,7 @@ Place these in EFI/EFI/OC/ACPI
 - [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
 
 ### Required Kexts
-Placed these in EFI/EFI/OC/Kexts
+Place these in EFI/EFI/OC/Kexts
 - [AppleALC.kext](https://github.com/acidanthera/applealc/releases)
 - [Lilu.kext](https://github.com/acidanthera/lilu/releases)
 - [WhateverGreen.kext](https://github.com/acidanthera/whatevergreen/releases)
@@ -105,7 +105,7 @@ Placed these in EFI/EFI/OC/Kexts
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
 
 ### Kexts for Dell DW1560 wifi
-Placed in EFI/EFI/OC/Kexts 
+Place these in EFI/EFI/OC/Kexts 
  - [AirportBrcmFixup.kext](https://github.com/acidanthera/airportbrcmfixup/releases)
  - [BrcmPatchRAM3.kext](https://github.com/acidanthera/BrcmPatchRAM/releases)  
    - BrcmBluetoothInjector.kext
