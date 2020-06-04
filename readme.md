@@ -5,6 +5,17 @@ This is not meant to be a guide or walkthrough but merely a dump of files and no
 
 Confirmed working on MacOS Catalina 10.15.5
 #
+
+# Requirements
+  - Core i3 or Core i5 Processor 
+    - Will NOT work with the Celeron model
+  - Minimum of a 32GB SSD
+    - Minimum 64GB recommended
+  - A compatible WiFi card
+    - The Dell DW1560 works in MacOS, Windows & Ubuntu
+  - MacOS installer flash drive 
+    - There are plenty of guides on how to make this so that won't be covered here
+    
 ### Basic steps:
  - Install MrChromebox custom [UEFI firmware](https://mrchromebox.tech/#fwscript)
  - Create MacOS installer flashdrive with [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) bootloader
@@ -24,40 +35,29 @@ If you want a full guide, use this: https://dortania.github.io/vanilla-laptop-gu
 All of the SSDTs and the config file were created through this guide.
 
 
-# Requirements
-  - Core i3 or Core i5 Processor 
-    - Will NOT work with the Celeron model
-  - Minimum of a 32GB SSD
-    - Minimum 64GB recommended
-  - A compatible WiFi card
-    - The Dell DW1560 works in MacOS, Windows & Ubuntu
-  - MacOS installer flash drive 
-    - There are plenty of guides on how to make this so that won't be covered here
-
 ## Notes
-  - This is all made for [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases) 0.5.9
+  - This is all made for [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9)
     - Be sure to use the same version
-    - Clover is no longer used here but old Clover data can be found in the Clover branch.
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile 
     - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
-  - The SSDTs are made from version 4.11.2 MrChromebox's firmware (other versions may work but YMMV)
+  - The SSDTs are made from version 4.11.2 of MrChromebox's firmware (other versions may work but YMMV)
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys. There are 7 stages, including off.
   
 ## What's Working: 
   - Just about everything!
   
 ## What's Not Working:
-  - Touchscreen - highly likely to be fixed
+  - Touchscreen - highly unlikely to be get this working. Fairly uncommon to have one on this device anyway.
   - Occasional trackpad click stick after waking from sleep
     - Possibly fixed with latest [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip)
 
 ## To Do:  
-  - Move DSDT keyboard backlight modification to a SSDT for smoother firmware upgradability
+  - You tell me!
 
 ## OpenCore Config
 Place this in EFI/EFI/OC/
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
-    - You will need to generate your own SMBIOS section with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a Macbook Air 7,2 profile.
+    - You will need to generate your own SMBIOS section using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a Macbook Air 7,2 profile.
     
 ## OpenCore Drivers
 These are included with the OpenCore download unless noted otherwise. 
@@ -71,6 +71,7 @@ These should be in EFI/EFI/OC/Drivers
 ## SSDT files
 Place these in EFI/EFI/OC/ACPI
 - [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml)
+  - Adds control for keyboard backlight
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
   - Exposes the embedded controller to MacOS
 - [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
@@ -96,7 +97,7 @@ Placed these in EFI/EFI/OC/Kexts
   - VoodooI2CSynaptics.kext
   - This is a modified VoodooI2C.kext for appropriate Trackpad sensitivity
 - [VoodooPS2Controller.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooPS2Controller-CB13.zip)
-  - This is a modified VoodooPS2Controller.kext to change the keyboard brightness control keys
+  - This is a modified VoodooPS2Controller.kext that changes the keyboard brightness control keys to ones that actually exist on most laptops. In this case, left ctrl + alt + brightness keys (F6/F7)
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
 
