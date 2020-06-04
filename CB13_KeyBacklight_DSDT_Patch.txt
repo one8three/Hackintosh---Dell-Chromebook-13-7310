@@ -1,0 +1,15 @@
+into device label PS2K insert
+begin
+Method (KKCL, 0, NotSerialized)\n
+{\n
+    Return (Package() { 0, 7, 20, 35, 50, 75, 100, })\n
+}\n
+Method (KKCM, 1, NotSerialized)\n
+{\n
+    Store (Arg0, \_SB.PCI0.LPCB.EC0.KBLV)\n
+}\n
+Method (KKQC, 0, NotSerialized)\n
+{\n
+    Return (\_SB.PCI0.LPCB.EC0.KBLV)\n
+}\n
+end;
