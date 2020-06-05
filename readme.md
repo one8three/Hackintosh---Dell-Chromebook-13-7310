@@ -7,6 +7,8 @@ Confirmed working on MacOS Catalina 10.15.5
 #
 
 ### Requirements
+  - MrChromeBox Firmware version 4.11.2
+    - Other versions will NOT work. I will try to update to 4.12 when I can.
   - Core i3 or Core i5 Processor 
     - Will not work with the Celeron model
   - Minimum of a 32GB SSD
@@ -21,7 +23,8 @@ Confirmed working on MacOS Catalina 10.15.5
     - Be sure to use the same version
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile
     - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
-  - The DSDT/SSDTs are made from version 4.11.2 of MrChromebox's firmware (other versions may work but YMMV)
+  - The DSDT/SSDTs are made from version 4.11.2 of MrChromebox's firmware
+      - This will NOT work with newer versions. I will try to update for 4.12 when I can.
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
 
 ### What's Working: 
