@@ -7,8 +7,8 @@ Confirmed working on MacOS Catalina 10.15.5
 #
 
 ### Requirements
-  - MrChromeBox Firmware version 4.11.2
-    - Other versions will NOT work. I will try to update to 4.12 when I can.
+  - MrChromeBox coreboot Firmware version 4.11.2 - other versions will NOT work. Yet...
+    - 4.12 support coming soon!
   - Core i3 or Core i5 Processor 
     - Will not work with the Celeron model
   - Minimum of a 32GB SSD
