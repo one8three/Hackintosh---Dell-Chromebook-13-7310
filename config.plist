@@ -291,9 +291,9 @@
 			<key>ProvideCustomSlide</key>
 			<true/>
 			<key>RebuildAppleMemoryMap</key>
-			<true/>
+			<false/>
 			<key>SetupVirtualMap</key>
-			<true/>
+			<false/>
 			<key>SignalAppleOS</key>
 			<false/>
 			<key>SyncRuntimePermissions</key>
@@ -866,7 +866,7 @@
 			<key>PollAppleHotKeys</key>
 			<true/>
 			<key>ShowPicker</key>
-			<false/>
+			<true/>
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
@@ -1016,7 +1016,7 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string></string>
+			<string>C026506004NG91QAD</string>
 			<key>ROM</key>
 			<data>j3FSWS99</data>
 			<key>SpoofVendor</key>
@@ -1024,9 +1024,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookAir7,2</string>
 			<key>SystemSerialNumber</key>
-			<string></string>
+			<string>C02ST0VPG940</string>
 			<key>SystemUUID</key>
-			<string></string>
+			<string>5B98F3FE-A5E8-4A19-B989-8F7152592F7D</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
