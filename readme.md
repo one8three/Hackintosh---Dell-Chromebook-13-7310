@@ -23,7 +23,6 @@ If updating from coreboot 4.11.2 to 4.12:
     - Minimum 64GB recommended
   - A compatible WiFi card
     - The Dell DW1560 works in MacOS, Windows & Ubuntu
-    - There is now limited functionality for the stock Intel wifi card, however that will not be covered here
   - MacOS installer flash drive 
     - There are plenty of guides on how to make this so that won't be covered here
 
