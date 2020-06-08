@@ -6,8 +6,9 @@ This is not meant to be a guide or walkthrough but merely a dump of files and no
 Confirmed working on MacOS Catalina 10.15.5
 #
 If updating from coreboot 4.11.2 to 4.12:
-  - Grab the new DSDT.aml, SSDT-PLUG.aml, config.plist, and USBMap.kext
-  - Remove SSDT-USB.aml from EFI/OC/ACPI
+  - Grab the new [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml), [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml), [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist), and [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
+  - Copy your SMBIOS into the new config.plist
+  - Remove SSDT-USB.aml from EFI/EFI/OC/ACPI
   - Remove the NVRAM logouthook:
     - Run this command in terminal "sudo defaults delete com.apple.loginwindow LogoutHook"
     - Delete /Users/yourusername/LogoutHook
@@ -30,7 +31,7 @@ If updating from coreboot 4.11.2 to 4.12:
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile
      - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
-  - I have not confirmed if Filevault works but don't see why it wouldn't. Howeverm the config.plist isn't set up properly for it.
+  - I have not confirmed if Filevault works but don't see why it wouldn't. However, the config.plist isn't set up properly for it.
     - If you want to enable it, adjust the config file according to [here](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/security#filevault) first!
     
 ### What's Working: 
@@ -38,8 +39,8 @@ If updating from coreboot 4.11.2 to 4.12:
   
 ### What's Not Working: 
   - Touchscreen - highly unlikely that this will ever work - fairly uncommon to have one on this device anyway
-  - Occasionally the trackpad will get stuck in a click
-    - Sometimes it clears on its own, sometimes it doesn't. Sometimes a restart is required.
+  - Occasionally the trackpad will get stuck in a drag/highlight mode
+    - Sometimes it can be cleared clicking several times. Sometimes a restart is required.
 
 ### To Do:  
   - Test Filevault
@@ -47,10 +48,11 @@ If updating from coreboot 4.11.2 to 4.12:
 #
 
 ## Basic Installation steps:
- - Install [MrChromebox coreboot UEFI firmware](https://mrchromebox.tech/#fwscript)
- - Create MacOS installer flashdrive with [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) bootloader
+ - Install [MrChromebox coreboot firmware](https://mrchromebox.tech/#fwscript)
+ - Create a MacOS installer flashdrive with [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) bootloader
  - Download the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
- - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)to generate a unique SMBIOS and add it to the config.plist
+ - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate a unique SMBIOS and add it to the config.plist
+    - Use a MacBook Air 7,2 profile
  - Place the required files in their appropriate locations on your EFI partition
  - Install MacOS
  - Install OpenCore to the internal SSD
@@ -66,21 +68,21 @@ most of the files in this repo were created using this guide
 ## Required Files
 
 ### OpenCore Config
-Place this in /EFI/OC/
+Place this in EFI/EFI/OC/
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
     - You will need to generate your own SMBIOS section using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a Macbook Air 7,2 profile.
     
 ### OpenCore Drivers
 These are included with the OpenCore download unless noted otherwise.
-You'll find them in /EFI/OC/Drivers
+Place these in EFI/EFI/OC/Drivers
 - AudioDxe.efi
-- OpenCanopy.efi
-- Ps2KeyboardDxe.efi
 - [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
+- OpenCanopy.efi
 - OpenRuntime.efi
+- Ps2KeyboardDxe.efi
 
 ### DSDT/SSDT files
-Place these in EFIEFI/OC/ACPI
+Place these in EFI/EFI/OC/ACPI
 - [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml)
   - Adds control for keyboard backlight
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
@@ -92,7 +94,7 @@ Place these in EFIEFI/OC/ACPI
 - [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
   - Fixes IRQ conflicts with MacOS
 - [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
-  - I don't know that this one is actually necessary but it doesn't seem to have any negative side-effects
+  - This one might not actually be necessary but it doesn't seem to have any negative side-effects. 
 
 ### Required Kexts
 Place these in EFI/EFI/OC/Kexts
@@ -106,14 +108,14 @@ Place these in EFI/EFI/OC/Kexts
 - [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
 - [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip) 
   - VoodooI2CSynaptics.kext
-  - This is a modified VoodooI2C.kext for appropriate Trackpad sensitivity
+  - This is a modified VoodooI2C.kext for proper trackpad sensitivity
 - [VoodooPS2Controller.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooPS2Controller-CB13.zip)
-  - This is a modified VoodooPS2Controller.kext that changes the keyboard brightness control keys to ones that actually exist on most laptops. In this case, left ctrl + alt + brightness keys (F6/F7)
+  - This is a modified VoodooPS2Controller.kext that changes the keyboard brightness control keys to ones that actually exist on most laptops. In this case, left ctrl + alt + F6/F7 (CB13 brightness keys)
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
 
 ### Kexts for Dell DW1560 wifi
-Place these in /EFI/OC/Kexts 
+Place these in EFI/EFI/OC/Kexts 
  - [AirportBrcmFixup.kext](https://github.com/acidanthera/airportbrcmfixup/releases)
  - [BrcmPatchRAM3.kext](https://github.com/acidanthera/BrcmPatchRAM/releases)  
    - BrcmBluetoothInjector.kext
@@ -123,7 +125,8 @@ Place these in /EFI/OC/Kexts
 - Disable force click in trackpad settings
 - Disable hibernate with "sudo pmset -a hibernatemode 0"
 - Install [Karabiner](https://karabiner-elements.pqrs.org) to map top row keyboard shortcuts
-  - Here are preconfigured "Complex modifications" for the first 4 keys - [First 4 top row Chromebook keys](https://genesy.github.io/karabiner-complex-rules-generator/#eyJ0aXRsZSI6IkNocm9tZWJvb2sgVG9wIFJvdyIsInJ1bGVzIjpbeyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMSJ9LCJ0byI6W3sia2V5X2NvZGUiOiJvcGVuX2JyYWNrZXQiLCJyZXBlYXQiOmZhbHNlLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiXX1dfV0sImRlc2NyaXB0aW9uIjoiRjEgdG8gQmFjayJ9LHsibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7ImtleV9jb2RlIjoiZjIifSwidG8iOlt7ImtleV9jb2RlIjoiY2xvc2VfYnJhY2tldCIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdLCJyZXBlYXQiOmZhbHNlfV19XSwiZGVzY3JpcHRpb24iOiJGMiB0byBGb3J3YXJkIn0seyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMyJ9LCJ0byI6W3sia2V5X2NvZGUiOiJyIiwicmVwZWF0IjpmYWxzZSwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIl19XX1dLCJkZXNjcmlwdGlvbiI6IkYzIHRvIFJlZnJlc2gifSx7Im1hbmlwdWxhdG9ycyI6W3sidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJrZXlfY29kZSI6ImY0In0sInRvIjpbeyJrZXlfY29kZSI6ImYiLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiLCJsZWZ0X2NvbnRyb2wiXSwicmVwZWF0IjpmYWxzZX1dfV0sImRlc2NyaXB0aW9uIjoiRjQgdG8gRnVsbHNjcmVlbiJ9XX0=)
+  - Use the "Function keys" tab to map mission control, volume, and brightness keys (F5-F10)
+  - Here are preconfigured "Complex modifications" for the first 4 keys (F1-F4) - [First 4 top row Chromebook keys](https://genesy.github.io/karabiner-complex-rules-generator/#eyJ0aXRsZSI6IkNocm9tZWJvb2sgVG9wIFJvdyIsInJ1bGVzIjpbeyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMSJ9LCJ0byI6W3sia2V5X2NvZGUiOiJvcGVuX2JyYWNrZXQiLCJyZXBlYXQiOmZhbHNlLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiXX1dfV0sImRlc2NyaXB0aW9uIjoiRjEgdG8gQmFjayJ9LHsibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7ImtleV9jb2RlIjoiZjIifSwidG8iOlt7ImtleV9jb2RlIjoiY2xvc2VfYnJhY2tldCIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdLCJyZXBlYXQiOmZhbHNlfV19XSwiZGVzY3JpcHRpb24iOiJGMiB0byBGb3J3YXJkIn0seyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMyJ9LCJ0byI6W3sia2V5X2NvZGUiOiJyIiwicmVwZWF0IjpmYWxzZSwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIl19XX1dLCJkZXNjcmlwdGlvbiI6IkYzIHRvIFJlZnJlc2gifSx7Im1hbmlwdWxhdG9ycyI6W3sidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJrZXlfY29kZSI6ImY0In0sInRvIjpbeyJrZXlfY29kZSI6ImYiLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiLCJsZWZ0X2NvbnRyb2wiXSwicmVwZWF0IjpmYWxzZX1dfV0sImRlc2NyaXB0aW9uIjoiRjQgdG8gRnVsbHNjcmVlbiJ9XX0=)
 
 
 #
