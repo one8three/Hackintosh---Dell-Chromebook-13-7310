@@ -52,7 +52,7 @@
 				<key>Path</key>
 				<string>SSDT-SBUS-MCHC.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -900,8 +900,6 @@
 		</array>
 		<key>Security</key>
 		<dict>
-			<key>New item</key>
-			<string></string>
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
@@ -1016,7 +1014,7 @@
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string></string>
+			<string>MacBookAir7,2</string>
 			<key>SystemSerialNumber</key>
 			<string></string>
 			<key>SystemUUID</key>
