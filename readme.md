@@ -7,7 +7,7 @@ Confirmed working on MacOS Catalina 10.15.5
 #
 If updating from coreboot 4.11.2 to 4.12:
   - Grab the new DSDT.aml, SSDT-PLUG.aml, config.plist, and USBMap.kext
-  - Remove SSDT-USB.aml from your EFI
+  - Remove SSDT-USB.aml from EFI/OC/ACPI
   - Remove the NVRAM logouthook:
     - Run this command in terminal "sudo defaults delete com.apple.loginwindow LogoutHook"
     - Delete /Users/yourusername/LogoutHook
@@ -30,7 +30,7 @@ If updating from coreboot 4.11.2 to 4.12:
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile
   - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
-  - I have not confirmed if Filevault works but don't see why it wouldn't.
+  - I have not confirmed if Filevault works but don't see why it wouldn't. Howeverm the config.plist isn't set up properly for it.
     - If you want to enable it, adjust the config file according to [here](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/security#filevault) first!
     
 ### What's Working: 
@@ -42,7 +42,7 @@ If updating from coreboot 4.11.2 to 4.12:
     - Sometimes it clears on its own, sometimes it doesn't. Sometimes a restart is required.
 
 ### To Do:  
-  - Nothing!
+  - Test Filevault
 
 #
 
@@ -57,7 +57,7 @@ If updating from coreboot 4.11.2 to 4.12:
  - Disable force click in trackpad system preferences
  - Install [Karabiner](https://karabiner-elements.pqrs.org) to map top row keyboard shortcuts
    - Use the "Function keys" tab to map mission control, volume, and brightness keys (F5-F10)
-   - Here are preconfigured "Complex modifications" tab for the first 4 keys (F1-F4) - [First 4 top row Chromebook keys](https://genesy.github.io/karabiner-complex-rules-generator/#eyJ0aXRsZSI6IkNocm9tZWJvb2sgVG9wIFJvdyIsInJ1bGVzIjpbeyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMSJ9LCJ0byI6W3sia2V5X2NvZGUiOiJvcGVuX2JyYWNrZXQiLCJyZXBlYXQiOmZhbHNlLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiXX1dfV0sImRlc2NyaXB0aW9uIjoiRjEgdG8gQmFjayJ9LHsibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7ImtleV9jb2RlIjoiZjIifSwidG8iOlt7ImtleV9jb2RlIjoiY2xvc2VfYnJhY2tldCIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdLCJyZXBlYXQiOmZhbHNlfV19XSwiZGVzY3JpcHRpb24iOiJGMiB0byBGb3J3YXJkIn0seyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMyJ9LCJ0byI6W3sia2V5X2NvZGUiOiJyIiwicmVwZWF0IjpmYWxzZSwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIl19XX1dLCJkZXNjcmlwdGlvbiI6IkYzIHRvIFJlZnJlc2gifSx7Im1hbmlwdWxhdG9ycyI6W3sidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJrZXlfY29kZSI6ImY0In0sInRvIjpbeyJrZXlfY29kZSI6ImYiLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiLCJsZWZ0X2NvbnRyb2wiXSwicmVwZWF0IjpmYWxzZX1dfV0sImRlc2NyaXB0aW9uIjoiRjQgdG8gRnVsbHNjcmVlbiJ9XX0=)
+   - Here are preconfigured "Complex modifications" for the first 4 keys (F1-F4) - [First 4 top row Chromebook keys](https://genesy.github.io/karabiner-complex-rules-generator/#eyJ0aXRsZSI6IkNocm9tZWJvb2sgVG9wIFJvdyIsInJ1bGVzIjpbeyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMSJ9LCJ0byI6W3sia2V5X2NvZGUiOiJvcGVuX2JyYWNrZXQiLCJyZXBlYXQiOmZhbHNlLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiXX1dfV0sImRlc2NyaXB0aW9uIjoiRjEgdG8gQmFjayJ9LHsibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7ImtleV9jb2RlIjoiZjIifSwidG8iOlt7ImtleV9jb2RlIjoiY2xvc2VfYnJhY2tldCIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdLCJyZXBlYXQiOmZhbHNlfV19XSwiZGVzY3JpcHRpb24iOiJGMiB0byBGb3J3YXJkIn0seyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMyJ9LCJ0byI6W3sia2V5X2NvZGUiOiJyIiwicmVwZWF0IjpmYWxzZSwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIl19XX1dLCJkZXNjcmlwdGlvbiI6IkYzIHRvIFJlZnJlc2gifSx7Im1hbmlwdWxhdG9ycyI6W3sidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJrZXlfY29kZSI6ImY0In0sInRvIjpbeyJrZXlfY29kZSI6ImYiLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiLCJsZWZ0X2NvbnRyb2wiXSwicmVwZWF0IjpmYWxzZX1dfV0sImRlc2NyaXB0aW9uIjoiRjQgdG8gRnVsbHNjcmVlbiJ9XX0=)
  - Disable hibernate with "sudo pmset -a hibernatemode 0"
 
 If you want a full guide, use this: https://dortania.github.io/vanilla-laptop-guide/ -
@@ -66,13 +66,13 @@ most of the files in this repo were created using this guide
 ## Required Files
 
 ### OpenCore Config
-Place this in EFI/EFI/OC/
+Place this in /EFI/OC/
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
     - You will need to generate your own SMBIOS section using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a Macbook Air 7,2 profile.
     
 ### OpenCore Drivers
 These are included with the OpenCore download unless noted otherwise.
-You'll find them in EFI/EFI/OC/Drivers
+You'll find them in /EFI/OC/Drivers
 - AudioDxe.efi
 - OpenCanopy.efi
 - Ps2KeyboardDxe.efi
@@ -80,17 +80,19 @@ You'll find them in EFI/EFI/OC/Drivers
 - OpenRuntime.efi
 
 ### DSDT/SSDT files
-Place these in EFI/EFI/OC/ACPI
+Place these in EFIEFI/OC/ACPI
 - [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml)
   - Adds control for keyboard backlight
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
-  - Exposes the embedded controller to MacOS
+  - Creates a phony EC controller - required to boot Catalina
 - [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
   - Enables LCD backlight control
 - [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml)
   - Enables proper CPU power management
 - [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
+ - 
 - [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
+  - Fixes IRQ conflicts with MacOS
 
 ### Required Kexts
 Place these in EFI/EFI/OC/Kexts
@@ -111,7 +113,7 @@ Place these in EFI/EFI/OC/Kexts
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
 
 ### Kexts for Dell DW1560 wifi
-Place these in EFI/EFI/OC/Kexts 
+Place these in /EFI/OC/Kexts 
  - [AirportBrcmFixup.kext](https://github.com/acidanthera/airportbrcmfixup/releases)
  - [BrcmPatchRAM3.kext](https://github.com/acidanthera/BrcmPatchRAM/releases)  
    - BrcmBluetoothInjector.kext
