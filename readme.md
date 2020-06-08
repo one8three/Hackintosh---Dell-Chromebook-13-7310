@@ -31,8 +31,6 @@ If updating from coreboot 4.11.2 to 4.12:
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBook Air 7,2 profile
      - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
-  - I have not confirmed if Filevault works but don't see why it wouldn't. However, the config.plist isn't set up properly for it.
-    - If you want to enable it, adjust the config file according to [here](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/security#filevault) first!
     
 ### What's Working: 
   - Just about everything!
@@ -43,7 +41,7 @@ If updating from coreboot 4.11.2 to 4.12:
     - Sometimes it can be cleared clicking several times. Sometimes a restart is required.
 
 ### To Do:  
-  - Test Filevault
+  - Hope for the VoodooI2C team to fix the ocassional click/drag stick
 
 #
 
