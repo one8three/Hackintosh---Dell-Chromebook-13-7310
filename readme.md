@@ -6,7 +6,7 @@ This is not meant to be a guide or walkthrough but merely a dump of files and no
 Confirmed working on MacOS Catalina 10.15.5
 #
 If updating from coreboot 4.11.2 to 4.12:
-  - Grab the new [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml), [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml), [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist), and [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
+  - Grab the new [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml), [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PLUG.aml), [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist), and [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
   - Copy your SMBIOS into the new config.plist
   - Remove SSDT-USB.aml from EFI/EFI/OC/ACPI
   - Remove the NVRAM logouthook:
@@ -37,7 +37,7 @@ If updating from coreboot 4.11.2 to 4.12:
 ### What's Not Working: 
   - Touchscreen - highly unlikely that this will ever work - fairly uncommon to have one on this device anyway
   - Occasionally the trackpad will get stuck in a drag/highlight mode
-    - Sometimes it can be cleared clicking several times. Sometimes a restart is required.
+    - Sometimes it can be cleared by clicking/dragging randomly, sometimes a restart is required
 
 ### To Do:  
   - Hope for the VoodooI2C team to fix the ocassional click/drag stick
@@ -91,7 +91,7 @@ Place these in EFI/EFI/OC/ACPI
 - [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
   - Fixes IRQ conflicts with MacOS
 - [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
-  - This one might not actually be necessary but it doesn't seem to have any negative side-effects. 
+  - This one might not actually be necessary but it doesn't seem to have any negative side-effects
 
 ### Required Kexts
 Place these in EFI/EFI/OC/Kexts
