@@ -88,11 +88,11 @@ Place these in EFIEFI/OC/ACPI
 - [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
   - Enables LCD backlight control
 - [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml)
-  - Enables proper CPU power management
-- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
-  - 
+  - Enables proper CPU power management 
 - [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
   - Fixes IRQ conflicts with MacOS
+- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
+  - I don't know that this one is actually necessary but it doesn't seem to have any negative side-effects
 
 ### Required Kexts
 Place these in EFI/EFI/OC/Kexts
