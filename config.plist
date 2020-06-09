@@ -52,7 +52,7 @@
 				<key>Path</key>
 				<string>SSDT-SBUS-MCHC.aml</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -909,7 +909,7 @@
 			<key>BlacklistAppleUpdate</key>
 			<true/>
 			<key>BootProtect</key>
-			<string>None</string>
+			<string>Bootstrap.efi</string>
 			<key>ExposeSensitiveData</key>
 			<integer>6</integer>
 			<key>HaltLevel</key>
