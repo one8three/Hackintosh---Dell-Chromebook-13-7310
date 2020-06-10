@@ -64,13 +64,13 @@ most of the files in this repo were created using this guide
 ## Required Files
 
 ### OpenCore Config
-Place this in EFI/EFI/OC/
+Place this in/EFI/OC/
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
     - You will need to generate your own SMBIOS section using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a MacBookAir7,2 profile.
     
 ### OpenCore Drivers
 These are included with the OpenCore download unless noted otherwise.
-Place these in EFI/EFI/OC/Drivers
+Place these in /EFI/OC/Drivers
 - AudioDxe.efi
 - [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
 - OpenCanopy.efi
@@ -78,7 +78,7 @@ Place these in EFI/EFI/OC/Drivers
 - Ps2KeyboardDxe.efi
 
 ### DSDT/SSDT files
-Place these in EFI/EFI/OC/ACPI
+Place these in /EFI/OC/ACPI
 - [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml)
   - Adds control for keyboard backlight
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
@@ -93,7 +93,7 @@ Place these in EFI/EFI/OC/ACPI
   - This one might not actually be necessary but it doesn't seem to have any negative side-effects
 
 ### Required Kexts
-Place these in EFI/EFI/OC/Kexts
+Place these in /EFI/OC/Kexts
 - [AppleALC.kext](https://github.com/acidanthera/applealc/releases)
 - [Lilu.kext](https://github.com/acidanthera/lilu/releases)
 - [WhateverGreen.kext](https://github.com/acidanthera/whatevergreen/releases)
@@ -111,7 +111,7 @@ Place these in EFI/EFI/OC/Kexts
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
 
 ### Kexts for Dell DW1560 wifi
-Place these in EFI/EFI/OC/Kexts 
+Place these in /EFI/OC/Kexts 
  - [AirportBrcmFixup.kext](https://github.com/acidanthera/airportbrcmfixup/releases)
  - [BrcmPatchRAM3.kext](https://github.com/acidanthera/BrcmPatchRAM/releases)  
    - BrcmBluetoothInjector.kext
