@@ -17,14 +17,14 @@ If updating from coreboot 4.11.2 to 4.12:
 
 ### Requirements
   - Core i3 or i5 Processor
-  - [MrChromebox coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
+  - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
   - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A compatible WiFi card
     - The Dell DW1560 works in MacOS, Windows & Ubuntu
   - MacOS installer flash drive 
-    - There are plenty of guides on how to make this so that won't be covered here
+    - See the guide linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
 ### Notes
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBookAir7,2 profile
@@ -46,25 +46,30 @@ If updating from coreboot 4.11.2 to 4.12:
 
 #
 
-## Basic Installation steps:
+## Basic Installation Steps:
+ - Get the MAC address of your WiFi card - it should be printed on it or get it from your current OS - you'll need this later
  - Install [MrChromebox coreboot firmware](https://mrchromebox.tech/#fwscript)
- - Create a MacOS installer flashdrive by [following this guide](https://dortania.github.io/vanilla-laptop-guide/preparations/online-installer.html)
+ - Create a MacOS installer flash drive by following [this guide](https://dortania.github.io/vanilla-laptop-guide/preparations/online-installer.html)
+ - Download [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) and copy only the highlighted files in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Required%20Files%20From%20OC.png) to your flash drive
  - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
+ - Move the required files to their appropriate locations on your installer flash drive
+    - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/EFI.png) - make sure all of those files are there
  - Follow the PlatformInfo portion of the [this guide](https://dortania.github.io/vanilla-laptop-guide/OpenCore/config-laptop.plist/broadwell.html#platforminfo) to edit the config.plist from this repo
+    - You'll need [ProperTree](https://github.com/corpnewt/ProperTree) to edit the plist file and [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate the SMBIOS info
     - Use a MacBookAir7,2 profile
-    - You'll need to get [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
- - Place the required files in their appropriate locations on your EFI partition of your installer flash drive
- - Boot to your installer and Install MacOS
- - Copy all of the OpenCore files to the EFI partition of your internal SSD
+    - Use your MAC address for the ROM field (You did get your MAC address, right?)
+ - Boot to your installer and install MacOS
+ - Boot into MacOS using your installer flash drive and copy the EFI folder from you installer flashdrive to the EFI partition of your internal SSD
+    - Use [MountEFI](https://github.com/corpnewt/MountEFI) to mount the EFI partition
  - Follow the [post install](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#post-install) steps below
-
+ 
 If you want a full guide, use this: https://dortania.github.io/vanilla-laptop-guide/ -
-most of the files in this repo were created using this guide
+most of the files in this repo were created using this guide so you won't need to generate them yourself. Simply pull them from here as you go through the guide.
 #
 ## Required Files
 
 ### OpenCore Config
-Place this in/EFI/OC/
+Place this in /EFI/OC/
   - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
     - You will need to generate your own SMBIOS section using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a MacBookAir7,2 profile.
     
@@ -116,13 +121,14 @@ Place these in /EFI/OC/Kexts
  - [BrcmPatchRAM3.kext](https://github.com/acidanthera/BrcmPatchRAM/releases)  
    - BrcmBluetoothInjector.kext
    - BrcmFirmwareData.kext
- 
+#
 ## Post-Install
 - Disable force click in trackpad settings
 - Disable hibernate with "sudo pmset -a hibernatemode 0"
 - Install [Karabiner](https://karabiner-elements.pqrs.org) to map top row keyboard shortcuts
   - Use the "Function keys" tab to map mission control, volume, and brightness keys (F5-F10)
   - Here are preconfigured "Complex modifications" for the first 4 keys (F1-F4) - [First 4 top row Chromebook keys](https://genesy.github.io/karabiner-complex-rules-generator/#eyJ0aXRsZSI6IkNocm9tZWJvb2sgVG9wIFJvdyIsInJ1bGVzIjpbeyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMSJ9LCJ0byI6W3sia2V5X2NvZGUiOiJvcGVuX2JyYWNrZXQiLCJyZXBlYXQiOmZhbHNlLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiXX1dfV0sImRlc2NyaXB0aW9uIjoiRjEgdG8gQmFjayJ9LHsibWFuaXB1bGF0b3JzIjpbeyJ0eXBlIjoiYmFzaWMiLCJmcm9tIjp7ImtleV9jb2RlIjoiZjIifSwidG8iOlt7ImtleV9jb2RlIjoiY2xvc2VfYnJhY2tldCIsIm1vZGlmaWVycyI6WyJsZWZ0X2d1aSJdLCJyZXBlYXQiOmZhbHNlfV19XSwiZGVzY3JpcHRpb24iOiJGMiB0byBGb3J3YXJkIn0seyJtYW5pcHVsYXRvcnMiOlt7InR5cGUiOiJiYXNpYyIsImZyb20iOnsia2V5X2NvZGUiOiJmMyJ9LCJ0byI6W3sia2V5X2NvZGUiOiJyIiwicmVwZWF0IjpmYWxzZSwibW9kaWZpZXJzIjpbImxlZnRfZ3VpIl19XX1dLCJkZXNjcmlwdGlvbiI6IkYzIHRvIFJlZnJlc2gifSx7Im1hbmlwdWxhdG9ycyI6W3sidHlwZSI6ImJhc2ljIiwiZnJvbSI6eyJrZXlfY29kZSI6ImY0In0sInRvIjpbeyJrZXlfY29kZSI6ImYiLCJtb2RpZmllcnMiOlsibGVmdF9ndWkiLCJsZWZ0X2NvbnRyb2wiXSwicmVwZWF0IjpmYWxzZX1dfV0sImRlc2NyaXB0aW9uIjoiRjQgdG8gRnVsbHNjcmVlbiJ9XX0=)
+- Optional: Give OpenCore a [GUI menu](https://dortania.github.io/OpenCore-Desktop-Guide/extras/gui.html)
 
 
 #
