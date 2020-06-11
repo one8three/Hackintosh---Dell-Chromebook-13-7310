@@ -6,9 +6,9 @@ This is not meant to be a guide or walkthrough but merely a dump of files and no
 Confirmed working on MacOS Catalina 10.15.5
 #
 If updating from coreboot 4.11.2 to 4.12:
-  - Grab the new [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml), [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PLUG.aml), [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist), and [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
+  - Grab the new [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml), [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PLUG.aml), [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist), and [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
   - Copy your SMBIOS into the new config.plist
-  - Remove SSDT-USB.aml from EFI/EFI/OC/ACPI
+  - Remove SSDT-USB.aml from /EFI/OC/ACPI
   - Remove the NVRAM logouthook:
     - Run this command in terminal "sudo defaults delete com.apple.loginwindow LogoutHook"
     - Delete /Users/yourusername/LogoutHook
@@ -47,17 +47,19 @@ If updating from coreboot 4.11.2 to 4.12:
 #
 
 ## Basic Installation Steps:
- - Get the MAC address of your WiFi card - it should be printed on it or get it from your current OS - you'll need this later
- - Install [MrChromebox coreboot firmware](https://mrchromebox.tech/#fwscript)
+- Install/update [MrChromebox coreboot firmware](https://mrchromebox.tech/#fwscript) if you haven't already
+- Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need it later
+ - Install your new WiFi card if you haven't already
  - Create a MacOS installer flash drive by following [this guide](https://dortania.github.io/vanilla-laptop-guide/preparations/online-installer.html)
- - Download [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) and copy only the highlighted files in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Required%20Files%20From%20OC.png) to your flash drive
+ - Download [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) and copy only the highlighted files in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
  - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
  - Move the required files to their appropriate locations on your installer flash drive
-    - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/EFI.png) - make sure all of those files are there
+    - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/EFI.png) - make sure all of the files are there
  - Follow the PlatformInfo portion of the [this guide](https://dortania.github.io/vanilla-laptop-guide/OpenCore/config-laptop.plist/broadwell.html#platforminfo) to edit the config.plist from this repo
     - You'll need [ProperTree](https://github.com/corpnewt/ProperTree) to edit the plist file and [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate the SMBIOS info
     - Use a MacBookAir7,2 profile
-    - Use your MAC address for the ROM field (You did get your MAC address, right?)
+    - In the config.plist, you need to enter values for: SystemProductName, SystemSerialNumber, MLB, SystemUUID, and ROM 
+      - Use your MAC address without the colons for the ROM field (You did get your MAC address, right?)
  - Boot to your installer and install MacOS
  - Boot into MacOS using your installer flash drive and copy the EFI folder from you installer flashdrive to the EFI partition of your internal SSD
     - Use [MountEFI](https://github.com/corpnewt/MountEFI) to mount the EFI partition
@@ -90,7 +92,7 @@ Place these in /EFI/OC/ACPI
   - Creates a phony EC controller - required to boot Catalina
 - [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
   - Enables LCD backlight control
-- [SSDT-PLUG](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml)
+- [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml)
   - Enables proper CPU power management 
 - [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
   - Fixes IRQ conflicts with MacOS
@@ -136,15 +138,15 @@ Place these in /EFI/OC/Kexts
 
 ### Credits & Sources (in no particular order and maybe missing some)
 - [Apple](https://www.apple.com)
-- https://github.com/MrChromebox/
-- https://github.com/acidanthera/
-- https://github.com/alexandred/
+- https://github.com/MrChromebox
+- https://github.com/acidanthera
+- https://github.com/alexandred
 - https://github.com/RehabMan
-- https://github.com/corpnewt/
+- https://github.com/corpnewt
 - https://www.insanelymac.com/
 - https://www.tonymacx86.com/
 - https://reddit.com/r/hackintosh
 - https://reddit.com/r/chrultrabook
-- https://github.com/TheRandMan/VoodooI2C-CB13
-- https://github.com/TheRandMan/VoodooPS2-CB13
+- https://github.com/TheRandMan/VoodooI2C-CB13/
+- https://github.com/TheRandMan/VoodooPS2-CB13/
 - https://dortania.github.io/vanilla-laptop-guide/
