@@ -51,25 +51,26 @@ If updating from coreboot 4.11.2 to 4.12:
 #
 
 ## Before Getting Started
-- I strongly suggest becoming familiar with Hackintoshing before jumping into this. Know the downsides, shortcomings, and difficulties. Read through the [dortania guide](https://dortania.github.io/vanilla-laptop-guide/), poke around on [r/hackintosh](https://reddit.com/r/hackintosh), have a look around [InsanelyMac](https://www.insanelymac.com) and [TonyMacX86](https://www.tonymacx86.com)(even though this guide doesn't use their tools there is still a lot of useful information), and do some general web searches. Even if a lot of it doesn't make sense, just reading throught and becoming familiar with terms will be helpful! Again, become at least somewhat familiar with Hackintoshing!
-- Know that MacOS and firmware updates may break your installation! Before updating  MacOS or firmware, check back here to see what the status is! I will likely be keeping my device up to date. So, again, check here before you update! The compatible MacOS and firmware versions will always be at the top of the readme!
-- Don't let this section scare you off! Once the system is up and running, it's very stable!
+- I strongly suggest becoming familiar with Hackintoshing before jumping into this. Know the downsides, shortcomings, and difficulties. Read through the [dortania guide](https://dortania.github.io/vanilla-laptop-guide/), poke around on [r/hackintosh](https://reddit.com/r/hackintosh), have a look around [InsanelyMac](https://www.insanelymac.com) and [TonyMacX86](https://www.tonymacx86.com) (even though their tools aren't used here, they have a lot of useful information), and do some general web searches. Even if a lot of it doesn't make sense, just reading through it and becoming familiar with terms will be helpful!
+- Know that MacOS updates and firmware updates may break your installation! Before updating MacOS or firmware, check back here to see what the status is! I will likely be keeping my device up to date so check back here before doing any MacOS or firmware updates! The latest compatible MacOS and firmware versions will always be at the top of the this page.
+- Don't let this section scare you off! Once MacOS is up and running on your system, it is very stable!
 
 
 ## Basic Installation Steps:
 - Install/update [MrChromebox coreboot firmware](https://mrchromebox.tech/#fwscript) if you haven't already
-- Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need it later
- - Install your new WiFi card if you haven't already
  - Create a MacOS installer flash drive by following [this guide](https://dortania.github.io/vanilla-laptop-guide/preparations/online-installer.html)
  - Download [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) and copy only the highlighted files in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
  - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
  - Move the required files to their appropriate locations on your installer flash drive
     - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/EFI.png) - make sure all of the files are there
+ - Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need it for the next step
  - Follow the PlatformInfo portion of the [this guide](https://dortania.github.io/vanilla-laptop-guide/OpenCore/config-laptop.plist/broadwell.html#platforminfo) to edit the config.plist from this repo
     - You'll need [ProperTree](https://github.com/corpnewt/ProperTree) to edit the plist file and [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate the SMBIOS info
     - Use a MacBookAir7,2 profile
     - In the config.plist, you need to enter values for: SystemProductName, SystemSerialNumber, MLB, SystemUUID, and ROM 
       - Use your MAC address without the colons for the ROM field (You did get your MAC address, right?)
+ - Install your new WiFi card if you haven't already
+    - I had an odd issue of the Chromebook not booting after initially installing the new WiFi card. If this happens, disconnect the battery and WiFi card and try again.
  - Boot to your installer and install MacOS
  - Boot into MacOS using your installer flash drive and copy the EFI folder from you installer flashdrive to the EFI partition of your internal SSD
     - Use [MountEFI](https://github.com/corpnewt/MountEFI) to mount the EFI partition
