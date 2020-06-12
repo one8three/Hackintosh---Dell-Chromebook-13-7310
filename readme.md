@@ -1,7 +1,11 @@
 # Dell Chromebook 13 7310 Hackintosh
-Confirmed working on MacOS Catalina 10.15.5 and MrChromebox's coreboot 4.12
+
+### Confirmed working on:
+- MacOS: **Catalina 10.15.5**
+- MrChromebox coreboot: **4.12**
+
 #
-This is not meant to be a guide or walkthrough but merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
+This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
 
 
 #
@@ -38,8 +42,8 @@ If updating from coreboot 4.11.2 to 4.12:
 ### What's Not Working: 
   - Touchscreen - highly unlikely that this will ever work - fairly uncommon to have one on this device anyway
   - Occasionally the trackpad will get stuck in a drag/highlight mode
-    - Sometimes it can be cleared by clicking/dragging randomly, sometimes a restart is required
-    - Might be fixed with the current version of VoodooI2C. I haven't experienced this issue in a few days.
+    - Sometimes it can be cleared by clicking/dragging randomly. Mostly succesful with clicking the lower portion of the trackpad. Sometimes a restart is required.
+    - This might actually be fixed with the current version of VoodooI2C. I haven't experienced this issue in several days.
     
 ### To Do:  
   - Nothing!
@@ -47,8 +51,8 @@ If updating from coreboot 4.11.2 to 4.12:
 #
 
 ## Before Getting Started
-- I strongly suggest becoming familiar with Hackintoshing before jumping into this. Know the downsides, shortcomings, and difficulties. Read through the [dortania guide](https://dortania.github.io/vanilla-laptop-guide/), poke around on [r/hackintosh](https://reddit.com/r/hackintosh), have a look around [InsanelyMac](https://www.insanelymac.com) and [TonyMacX86](https://www.tonymacx86.com)(even though this guide doesn't use their tools), and do some general web searches. Even if a lot of it doesn't make sense, just reading throught and becoming familiar with terms will be helpful! Again, become at least somewhat familiar with Hackintoshing!
-- Know that OS and firmware updates may break your installation! Before updating OS or firmware, check back here to see what the status is! I will likely be keeping my device up to date. So, again, check here before you update! The compatible OS and firmware versions will always be at the readme!
+- I strongly suggest becoming familiar with Hackintoshing before jumping into this. Know the downsides, shortcomings, and difficulties. Read through the [dortania guide](https://dortania.github.io/vanilla-laptop-guide/), poke around on [r/hackintosh](https://reddit.com/r/hackintosh), have a look around [InsanelyMac](https://www.insanelymac.com) and [TonyMacX86](https://www.tonymacx86.com)(even though this guide doesn't use their tools there is still a lot of useful information), and do some general web searches. Even if a lot of it doesn't make sense, just reading throught and becoming familiar with terms will be helpful! Again, become at least somewhat familiar with Hackintoshing!
+- Know that MacOS and firmware updates may break your installation! Before updating  MacOS or firmware, check back here to see what the status is! I will likely be keeping my device up to date. So, again, check here before you update! The compatible MacOS and firmware versions will always be at the top of the readme!
 - Don't let this section scare you off! Once the system is up and running, it's very stable!
 
 
@@ -71,7 +75,7 @@ If updating from coreboot 4.11.2 to 4.12:
     - Use [MountEFI](https://github.com/corpnewt/MountEFI) to mount the EFI partition
  - Follow the [post install](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#post-install) steps below
  
-If you want a full guide, use this: https://dortania.github.io/vanilla-laptop-guide/ -
+If you want a full guide, use this one: https://dortania.github.io/vanilla-laptop-guide/ -
 most of the files in this repo were created using this guide so you won't need to generate them yourself. Simply pull them from here as you go through the guide.
 #
 ## Required Files
