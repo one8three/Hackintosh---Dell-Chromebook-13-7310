@@ -46,6 +46,11 @@ If updating from coreboot 4.11.2 to 4.12:
 
 #
 
+## Before Getting Started
+- I strongly suggest becoming familiar with Hackintoshing before jumping into this. Know the downsides, shortcomings, and difficulties. Read through the [dortania guide](https://dortania.github.io/vanilla-laptop-guide/), poke around on [r/hackintosh](https://reddit.com/r/hackintosh), have a look around [InsanelyMac](https://www.insanelymac.com) and [TonyMacX86](https://www.tonymacx86.com)(even though this guide doesn't use their tools), and do some general web searches. Become at least somewhat familiar with Hackintoshing!
+- Know that OS and firmware updates may break your installation! Before updating OS or firmware, check back here to see what the status is! I will likely be keeping my device up to date. So, again, check here before you update!
+
+
 ## Basic Installation Steps:
 - Install/update [MrChromebox coreboot firmware](https://mrchromebox.tech/#fwscript) if you haven't already
 - Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need it later
