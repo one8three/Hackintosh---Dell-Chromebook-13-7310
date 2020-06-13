@@ -5,7 +5,7 @@
 - MrChromebox coreboot: **4.12**
 
 #
-This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13. I will try to keep this updated as I update my Chromebook to future MacOS releases.
+This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases.
 
 
 #
@@ -19,7 +19,7 @@ If updating from coreboot 4.11.2 to 4.12:
 
 #
 
-### Requirements
+### Requirements:
   - Core i3 or i5 Processor
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
   - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
@@ -30,7 +30,7 @@ If updating from coreboot 4.11.2 to 4.12:
   - MacOS installer flash drive 
     - See the guide linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
-### Notes
+### Notes:
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBookAir7,2 profile
      - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
@@ -56,7 +56,7 @@ If updating from coreboot 4.11.2 to 4.12:
 - Don't let this section scare you off! Once MacOS is up and running on your system, it is very stable!
 
 
-## Basic Installation Steps:
+## Basic Installation Steps
 - Install/update [MrChromebox coreboot firmware](https://mrchromebox.tech/#fwscript) if you haven't already
  - Create a MacOS installer flash drive by following [this guide](https://dortania.github.io/vanilla-laptop-guide/preparations/online-installer.html)
  - Download [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) and copy only the highlighted files in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
@@ -72,11 +72,11 @@ If updating from coreboot 4.11.2 to 4.12:
  - Install your new WiFi card if you haven't already
     - I had an odd issue of the Chromebook not booting after initially installing the new WiFi card. If this happens, disconnect the battery and WiFi card and try again.
  - Boot to your installer and install MacOS
- - Boot into MacOS using your installer flash drive and copy the EFI folder from you installer flashdrive to the EFI partition of your internal SSD
-    - Use [MountEFI](https://github.com/corpnewt/MountEFI) to mount the EFI partition
+ - Boot into MacOS using your installer flash drive and copy the EFI folder from you installer flashdrive to the EFI partition of your internal SSD - you can mount the EFI partition with [MountEFI](https://github.com/corpnewt/MountEFI)
+    - More info can be found [here](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/oc2hdd.html#moving-opencore-from-usb-to-macos-drive) 
  - Follow the [post install](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#post-install) steps below
  
-If you want a full guide, use this one: https://dortania.github.io/vanilla-laptop-guide/ -
+If you want a full guide, I suggest this one: https://dortania.github.io/vanilla-laptop-guide/ -
 most of the files in this repo were created using this guide so you won't need to generate them yourself. Simply pull them from here as you go through the guide.
 #
 ## Required Files
