@@ -35,6 +35,7 @@ If updating from coreboot 4.11.2 to 4.12:
      - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
   - OpenCore is set to boot at 1280x1024 - booting at 1920x1080 causes the login screen to load up with extreme graphical glitches so don't bother changing it
+  - DRM doesn't work. If you need streaming services like Netflix, Hulu, Amazon Prime, etc., then this isn't for you. Or dual boot!
   
 ### What's Working: 
   - Just about everything!
@@ -44,7 +45,9 @@ If updating from coreboot 4.11.2 to 4.12:
   - Occasionally the trackpad will get stuck in a drag/highlight mode
     - Sometimes it can be cleared by clicking/dragging randomly. Mostly succesful with clicking the lower portion of the trackpad. Sometimes a restart is required.
     - This might actually be fixed with the current version of VoodooI2C. I haven't experienced this issue in several days.
-    
+  - Most DRM does not work. This mean no Applt TV, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
+      - DRM simply does not work on an iGPU only Hackintosh 
+  
 ### To Do:  
   - Nothing!
 
