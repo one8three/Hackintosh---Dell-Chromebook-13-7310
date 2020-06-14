@@ -1,3 +1,6 @@
+into method label KKCL parent_label PS2K remove_entry;
+into method label KKCM parent_label PS2K remove_entry;
+into method label KKQC parent_label PS2K remove_entry;
 into device label PS2K insert
 begin
 Method (KKCL, 0, NotSerialized)\n
