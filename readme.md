@@ -10,7 +10,7 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
 
 #
 If updating from coreboot 4.11.2 to 4.12:
-  - Grab the new [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml), [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PLUG.aml), [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist), and [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
+  - Grab the new [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml), [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PLUG.aml), [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/tree/master/configs), and [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
   - Copy your SMBIOS into the new config.plist
   - Remove SSDT-USB.aml from /EFI/OC/ACPI
   - Remove the NVRAM logouthook:
@@ -87,9 +87,10 @@ most of the files in this repo were created using this guide so you won't need t
 ## Required Files
 
 ### OpenCore Config
-Place this in /EFI/OC/
-  - [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/config.plist)
-    - You will need to generate your own SMBIOS section using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a MacBookAir7,2 profile.
+Place a config.plist in /EFI/OC/
+  - Download an OpenCore config file from here [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/tree/master/configs)
+    - Bes sure to rename your config file to config.plist
+    - You will need to generate your own PlatformInfo section using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a MacBookAir7,2 profile.
     
 ### OpenCore Drivers
 These are included with the OpenCore download unless noted otherwise.
