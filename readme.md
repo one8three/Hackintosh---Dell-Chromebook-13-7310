@@ -20,7 +20,8 @@ If updating from coreboot 4.11.2 to 4.12:
 #
 
 ### Requirements:
-  - Core i3 or i5 Processor
+  - Core i5 Processor
+      - Core i3 should work too but unconfirmed at this time
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
   - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
   - Minimum of a 32GB SSD
