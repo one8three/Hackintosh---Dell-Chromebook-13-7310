@@ -108,13 +108,13 @@ Place these in /EFI/OC/ACPI
   - Adds control for keyboard backlight
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
   - Creates a phony EC controller - required to boot Catalina
-- [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-PNLF.aml)
+- [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PNLF.aml)
   - Enables LCD backlight control
-- [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/SSDT-PLUG.aml)
+- [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PLUG.aml)
   - Enables proper CPU power management 
-- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-HPET.aml)
+- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/SSDT-HPET.aml)
   - Fixes IRQ conflicts with MacOS
-- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/OpenCore/SSDT-SBUS-MCHC.aml)
+- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/SSDT-SBUS-MCHC.aml)
   - This one might not actually be necessary but it doesn't seem to have any negative side-effects
 
 ### Required Kexts
@@ -126,14 +126,14 @@ Place these in /EFI/OC/Kexts
   - SMCBatteryManager.kext
   - SMCProcessor.kext
   - SMCSuperIO.kext
-- [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
+- [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.zip)
 - [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip) 
   - VoodooI2CSynaptics.kext
   - This is a modified VoodooI2C.kext for proper trackpad sensitivity
 - [VoodooPS2Controller.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooPS2Controller-CB13.zip)
   - This is a modified VoodooPS2Controller.kext that changes the keyboard brightness control keys to ones that actually exist on most laptops. In this case, left ctrl + alt + F6/F7 (CB13 brightness keys)
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
-- [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.kext.zip)
+- [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.zip)
 
 ### Kexts for Dell DW1560 wifi
 Place these in /EFI/OC/Kexts 
