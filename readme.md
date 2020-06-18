@@ -112,9 +112,9 @@ Place these in /EFI/OC/ACPI
   - Enables LCD backlight control
 - [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PLUG.aml)
   - Enables proper CPU power management 
-- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/SSDT-HPET.aml)
+- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-HPET.aml)
   - Fixes IRQ conflicts with MacOS
-- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/SSDT-SBUS-MCHC.aml)
+- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-SBUS-MCHC.aml)
   - This one might not actually be necessary but it doesn't seem to have any negative side-effects
 
 ### Required Kexts
