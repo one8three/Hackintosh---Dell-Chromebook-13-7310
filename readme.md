@@ -134,7 +134,6 @@ Place these in /EFI/OC/Kexts
   - This is a modified VoodooPS2Controller.kext that changes the keyboard brightness control keys to ones that actually exist on most laptops. In this case, left ctrl + alt + F6/F7 (CB13 brightness keys)
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.zip)
-    - For Core i5 processor only! If you're on an i3, follow "Using CPU Friend" portion of (this guide](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/pm.html#using-cpu-friend) to make you're own
 
 ### Kexts for Dell DW1560 wifi
 Place these in /EFI/OC/Kexts 
