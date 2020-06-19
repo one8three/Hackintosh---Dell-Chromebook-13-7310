@@ -21,7 +21,7 @@ If updating from coreboot 4.11.2 to 4.12:
 
 ### Requirements:
   - Core i5 Processor
-      - Core i3 should work too but unconfirmed at this time
+      - Core i3 should work too but unconfirmed at this time (if you try and it works, let me know!)
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
   - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
   - Minimum of a 32GB SSD
@@ -48,6 +48,7 @@ If updating from coreboot 4.11.2 to 4.12:
     - This might actually be fixed with the current version of VoodooI2C. I haven't experienced this issue in several days.
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - DRM simply does not work on an iGPU only Hackintosh 
+  - Wake on lid open (you have to press a key to wake)
   
 ### To Do:  
   - Nothing!
