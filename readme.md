@@ -26,10 +26,10 @@ If updating from coreboot 4.11.2 to 4.12:
   - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
-  - A compatible WiFi card
-    - The Dell DW1560 works in MacOS, Windows & Ubuntu
+  - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
+    - I can confirm the Dell DW1560 works in MacOS, Windows, & Ubuntu
   - MacOS installer flash drive 
-    - See the guide linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
+    - See the guides linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
 ### Notes:
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBookAir7,2 profile
