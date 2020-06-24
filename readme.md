@@ -3,6 +3,7 @@
 ### Confirmed working on:
 - MacOS: **Catalina 10.15.5**
 - MrChromebox coreboot: **4.12**
+- OpenCore: **0.5.9**
 
 #
 This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases.
@@ -48,16 +49,15 @@ If updating from coreboot 4.11.2 to 4.12:
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - DRM simply does not work on an iGPU only Hackintosh 
   - Wake on lid open (you have to press a key to wake)
-  - Have had reports of some models having trouble with booting the initial installation and waking to a black screen after sleep requiring a restart
   
 ### To Do:  
-  - Figure out what is causing graphics issues and wake from sleep issues with some devices (only confirmed to affect some i3s for now but may affect some i5s as well). I don't personally have a device with this issue so hopefully the community can figure this one out!
+  - Try to move keyboard backlight control modifications from DSDT to SSDT for easier firmware upgrades
 
 #
 
 ## Before Getting Started
-- I strongly suggest becoming familiar with Hackintoshing before jumping into this. Know the downsides, shortcomings, and difficulties. Read through the [dortania guide](https://dortania.github.io/vanilla-laptop-guide/), poke around on [r/hackintosh](https://reddit.com/r/hackintosh), have a look around [InsanelyMac](https://www.insanelymac.com) and [TonyMacX86](https://www.tonymacx86.com) (even though their tools aren't used here, they have a lot of useful information), and do some general web searches. Even if a lot of it doesn't make sense, just reading through it and becoming familiar with terms will be helpful!
-- Know that MacOS updates and firmware updates may break your installation! Before updating MacOS or firmware, check back here to see what the status is! I will likely be keeping my device up to date so check back here before doing any MacOS or firmware updates! The latest compatible MacOS and firmware versions will always be at the top of the this page.
+- I strongly suggest becoming familiar with Hackintoshing before jumping into this. Know the downsides, shortcomings, and difficulties. Read through the [dortania guide](https://dortania.github.io/vanilla-laptop-guide/), poke around on [r/hackintosh](https://reddit.com/r/hackintosh), have a look around [InsanelyMac](https://www.insanelymac.com) and [TonyMacX86](https://www.tonymacx86.com) (even though their tools aren't used here, they still have a lot of useful information), and do some general web searches. Even if a lot of it doesn't make sense, just reading through it and becoming familiar with terms will be helpful!
+- Updates to MacOS, OpenCore, or firmware may break your installation! I will likely be keeping my device up to date so check back here before doing any MacOS, OpenCore, or firmware updates! The latest compatible MacOS, OpenCore, and firmware versions will always be at the top of the this page.
 - Don't let this section scare you off! Once MacOS is up and running on your system, it is very stable!
 
 
