@@ -26,8 +26,8 @@ If updating from coreboot 4.11.2 to 4.12:
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
-    - I can confirm the Dell DW1560 works in MacOS, Windows, & Ubuntu (with additional kexts)
-    - Other users have reported success with the BCM94360NG (no additional kexts required!)
+    - I can confirm the Dell DW1560 works in MacOS (with additional kexts), Windows, & Ubuntu
+    - Other users have reported success with the BCM94360NG (has native MacOS support so no additional kexts required!)
   - MacOS installer flash drive 
     - See the guides linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
