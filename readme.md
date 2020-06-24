@@ -21,7 +21,7 @@ If updating from coreboot 4.11.2 to 4.12:
 
 ### Requirements:
   - Core i5 Processor
-      - Core i3 Processor (works but currently has issues where it wakes to a black screen after sleep)
+      - Core i3 Processor (works but have had reports of waking to a black screen after sleep requiring a restart)
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
   - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
   - Minimum of a 32GB SSD
@@ -49,10 +49,10 @@ If updating from coreboot 4.11.2 to 4.12:
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - DRM simply does not work on an iGPU only Hackintosh 
   - Wake on lid open (you have to press a key to wake)
-  - The Core i3 model wakes to a black screen after sleep
+  - Have had reports of the Core i3 model waking to a black screen after sleep requiring a restart
   
 ### To Do:  
-  - Get the i3 model to wake properly. I don't have this model so hoping the community can help with this one!
+  - Put a config togther that is confirmed to work with i3 model. I don't have this model so hopefully the community can help out!
 
 #
 
