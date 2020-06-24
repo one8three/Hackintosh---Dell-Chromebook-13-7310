@@ -20,25 +20,25 @@ If updating from coreboot 4.11.2 to 4.12:
 #
 
 ### Requirements:
-  - Core i5 Processor
-      - Core i3 Processor (works but have had reports of waking to a black screen after sleep requiring a restart)
+  - Core i3 or Core i5 processor
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
   - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
-    - I can confirm the Dell DW1560 works in MacOS, Windows, & Ubuntu
-    - Other users have reported success with the BCM94360NG
+    - I can confirm the Dell DW1560 works in MacOS, Windows, & Ubuntu (with additional kexts)
+    - Other users have reported success with the BCM94360NG (no additional kexts required!)
   - MacOS installer flash drive 
     - See the guides linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
 ### Notes:
+  - There appears to be some variances with this model. With some models, there can be an issue with booting MacOS after the initial install completes. This is only known to affect some i3 models but is possible it can affect i5 models as well. I'm unsure how to check for the difference at this time.
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBookAir7,2 profile
      - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
   - OpenCore is set to boot at 1280x1024 - booting at 1920x1080 causes the login screen to load up with extreme graphical glitches so don't bother changing it
-  - Most DRM doesn't work. If you need streaming services like Netflix, Hulu, Amazon Prime, etc., then this probably isn't for you. Or dual boot!
-  
+  - Most DRM doesn't work. If you need streaming services like Netflix, Hulu, Amazon Prime, etc., then this might not be for you. Or dual boot!
+    
 ### What's Working: 
   - Just about everything!
   
@@ -49,10 +49,10 @@ If updating from coreboot 4.11.2 to 4.12:
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - DRM simply does not work on an iGPU only Hackintosh 
   - Wake on lid open (you have to press a key to wake)
-  - Have had reports of the Core i3 model waking to a black screen after sleep requiring a restart
+  - Have had reports of some models having trouble with booting the initial installation and waking to a black screen after sleep requiring a restart
   
 ### To Do:  
-  - Put a config togther that is confirmed to work with i3 model. I don't have this model so hopefully the community can help out!
+  - Figure out what is causing graphics issues and wake from sleep issues with some devices (only confirmed to affect some i3s for now but may affect some i5s as well). I don't personally have a device with this issue so hopefully the community can figure this one out!
 
 #
 
