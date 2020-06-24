@@ -32,7 +32,6 @@ If updating from coreboot 4.11.2 to 4.12:
     - See the guides linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
 ### Notes:
-  - There appears to be some variances with this model. With some models, there can be an issue with booting MacOS after the initial install completes. This is only known to affect some i3 models but is possible it can affect i5 models as well. I'm unsure how to check for the difference at this time.
   - You will need to generate your own SMBIOS for the attached config.plist - Use the MacBookAir7,2 profile
      - Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to do this
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
@@ -102,7 +101,8 @@ most of the files in this repo were created using this guide so you won't need t
 ### OpenCore Config
 Place a config.plist in /EFI/OC/
   - Download an OpenCore config file from here [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/tree/master/configs)
-    - Bes sure to rename your config file to config.plist
+    - Some i3 models require the iGPU to be faked to HD 6000. If you have trouble booting MacOS use the i3Alt config. Fix found by @mankot14
+    - Be sure to rename your config file to config.plist
     - You will need to generate your own PlatformInfo section using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) - use a MacBookAir7,2 profile.
     
 ### OpenCore Drivers
