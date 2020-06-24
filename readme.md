@@ -21,13 +21,14 @@ If updating from coreboot 4.11.2 to 4.12:
 
 ### Requirements:
   - Core i5 Processor
-      - Core i3 should work too but unconfirmed at this time (if you try and it works, let me know!)
+      - Core i3 Processor (works but currently has issues where it wakes to a black screen after sleep)
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
   - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
     - I can confirm the Dell DW1560 works in MacOS, Windows, & Ubuntu
+    - Other users have reported success with the BCM94360NG
   - MacOS installer flash drive 
     - See the guides linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
@@ -45,13 +46,13 @@ If updating from coreboot 4.11.2 to 4.12:
   - Touchscreen - unlikely that this will ever work - fairly uncommon to have one on this device anyway
   - Occasionally the trackpad will get stuck in a drag/highlight mode
     - Sometimes it can be cleared by clicking/dragging randomly. Mostly succesful with clicking the lower portion of the trackpad. Sometimes a restart is required.
-    - This might actually be fixed with the current version of VoodooI2C. I haven't experienced this issue in several days.
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - DRM simply does not work on an iGPU only Hackintosh 
   - Wake on lid open (you have to press a key to wake)
+  - The Core i3 model wakes to a black screen after sleep
   
 ### To Do:  
-  - Nothing!
+  - Get the i3 model to wake properly. I don't have this model so hoping the community can help with this one!
 
 #
 
