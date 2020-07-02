@@ -10,14 +10,14 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
 
 
 #
-**Update 07/02/2020**
+### Update 07/02/2020
 
-Two of the last real issues are resolved in this update:
+The last 2 real issues are resolved in this update:
 - The weird click/highlight stick after sleep has been fixed with the new modified VoodooI2CSynaptics.kext included in VoodooI2C-CB13.zip
 - Lid wake now works
 
-If you'd like to update your current working build (from before 07/02/2020): 
-- Download and replace both kexts included in [VoodooI2C-CB13.zip](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip) (VoodoI2C.kext and VoodooI2CSynaptics.kext)
+If you'd like to update your current working setup (from before 07/02/2020): 
+- Download and replace **both** kexts included in [VoodooI2C-CB13.zip](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip) (VoodoI2C.kext and VoodooI2CSynaptics.kext)
 - Add **darkwake=1** to the boot-args of your config
 
 #
@@ -49,9 +49,9 @@ If you'd like to update your current working build (from before 07/02/2020):
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - This isn't specific to the Dell CB13. DRM simply does not work on an iGPU only Hackintosh 
   - ~~Occasionally the trackpad will get stuck in a drag/highlight mode after waking from sleep~~
-    - Fixed!
+    - Fixed! 07/02/2020
   - ~~Wake on lid open (you have to press a key to wake)~~
-    - Fixed!
+    - Fixed! 07/02/2020
   
 ### To Do:  
   - Try to move keyboard backlight control modifications from DSDT to SSDT for easier firmware upgrades
