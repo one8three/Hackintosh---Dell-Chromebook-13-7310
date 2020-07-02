@@ -10,9 +10,15 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
 
 
 #
-**Update 06/30/2020**
+**Update 07/02/2020**
 
-Click stick after sleep is fixed with the new kexts in [VoodooI2C-CB13.zip](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip). If updating from a previous version, replace both kexts.
+Two of the last real issues are resolved in this update:
+- The weird click/highlight stick after sleep has been fixed with the new modified VoodooI2C
+- Lid wake now works
+
+If you'd like to update your current working build (from before 07/02/2020): 
+- Download and replace both kexts included in [VoodooI2C-CB13.zip](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip) (VoodoI2C.kext and VoodooI2CSynaptics.kext)
+- Add **darkwake=1** to the boot-args of your config
 
 #
 
@@ -40,12 +46,12 @@ Click stick after sleep is fixed with the new kexts in [VoodooI2C-CB13.zip](http
   
 ### What's Not Working: 
   - Touchscreen - unlikely that this will ever work - fairly uncommon to have one on this device anyway
-  - ~~Occasionally the trackpad will get stuck in a drag/highlight mode after waking from sleep~~
-    - Fixed with the new VoodooI2C.kext & VoodooI2CSynaptics.kext in [VoodooI2C-CB13.zip](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip)
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
-      - DRM simply does not work on an iGPU only Hackintosh 
+      - This isn't specific to the Dell CB13. DRM simply does not work on an iGPU only Hackintosh 
+  - ~~Occasionally the trackpad will get stuck in a drag/highlight mode after waking from sleep~~
+    - Fixed!
   - ~~Wake on lid open (you have to press a key to wake)~~
-    - Fixed by adding darkwake=1 to boot-args (included in latest config.plist)
+    - Fixed!
   
 ### To Do:  
   - Try to move keyboard backlight control modifications from DSDT to SSDT for easier firmware upgrades
