@@ -10,13 +10,9 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
 
 
 #
-If updating from coreboot 4.11.2 to 4.12:
-  - Grab the new [DSDT.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/DSDT.aml), [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-PLUG.aml), [config.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/tree/master/configs), and [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.kext.zip)
-  - Copy your SMBIOS into the new config.plist
-  - Remove SSDT-USB.aml from /EFI/OC/ACPI
-  - Remove the NVRAM logouthook:
-    - Run this command in terminal "sudo defaults delete com.apple.loginwindow LogoutHook"
-    - Delete /Users/yourusername/LogoutHook
+**Update 06/30/2020**
+
+Click stick after sleep is fixed with the new kexts in [VoodooI2C-CB13.zip](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip). If updating from a previous version, replace both kexts.
 
 #
 
@@ -44,8 +40,8 @@ If updating from coreboot 4.11.2 to 4.12:
   
 ### What's Not Working: 
   - Touchscreen - unlikely that this will ever work - fairly uncommon to have one on this device anyway
-  - Occasionally the trackpad will get stuck in a drag/highlight mode
-    - Sometimes it can be cleared by clicking/dragging randomly. Mostly succesful with clicking the lower portion of the trackpad. Sometimes a restart is required.
+  - ~~Occasionally the trackpad will get stuck in a drag/highlight mode after waking from sleep~~
+    - Fixed with the new VoodooI2C.kext & VoodooI2CSynaptics.kext in [VoodooI2C-CB13.zip](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip)
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - DRM simply does not work on an iGPU only Hackintosh 
   - ~~Wake on lid open (you have to press a key to wake)~~
