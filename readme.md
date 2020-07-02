@@ -48,7 +48,8 @@ If updating from coreboot 4.11.2 to 4.12:
     - Sometimes it can be cleared by clicking/dragging randomly. Mostly succesful with clicking the lower portion of the trackpad. Sometimes a restart is required.
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - DRM simply does not work on an iGPU only Hackintosh 
-  - Wake on lid open (you have to press a key to wake)
+  - ~~Wake on lid open (you have to press a key to wake)~~
+    - Fixed by adding darkwake=1 to boot-args (included in latest config.plist)
   
 ### To Do:  
   - Try to move keyboard backlight control modifications from DSDT to SSDT for easier firmware upgrades
