@@ -10,6 +10,13 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
 
 
 #
+### Update 07/04/2020
+Small config.plist update for clean headphone audio. 
+
+If you'd like to update your current working setup (from before 07/04/2020):
+  - In the boot-args field in your config.plist, change **alcid=3** to **alcid=15**
+
+
 ### Update 07/02/2020
 
 The last 2 real issues are resolved in this update:
