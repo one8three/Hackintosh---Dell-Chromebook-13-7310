@@ -1,15 +1,18 @@
 # Dell Chromebook 13 7310 Hackintosh
 
 ### Confirmed working on:
-- MacOS: **Catalina 10.15.5**
+- MacOS: **Catalina 10.15.6**
 - MrChromebox coreboot: **4.12**
 - OpenCore: **0.5.9**
 
 #
-This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases.
+This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It may or may not work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist.
 
 
 #
+### Update 07/29/2020
+Confirmed working on 10.15.6. I updated successfully through System Preferences.
+
 ### Update 07/04/2020
 Small config.plist update for clean headphone audio. 
 
