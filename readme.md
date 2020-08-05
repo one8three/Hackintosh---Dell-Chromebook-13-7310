@@ -3,39 +3,30 @@
 ### Confirmed working on:
 - MacOS: **Catalina 10.15.6**
 - MrChromebox coreboot: **4.12**
-- OpenCore: **0.5.9**
+- OpenCore: **0.6.0**
 
 #
 This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It may or may not work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist.
 
 
 #
+### Update 08/04/2020
+- Updated configs for OpenCore 0.6.0
+- Switched to [VoodooRMI](https://github.com/VoodooSMBus/VoodooRMI/releases) as the trackpad kext
+  - More on this in the Required Kexts section below
+  - No longer using a modified VoodooI2CSynaptics.kext
+- In an attempt to make this easier to maintain, this will be the last time multiple configs are supplied
+
+   
 ### Update 07/29/2020
-Confirmed working on 10.15.6. I updated successfully through System Preferences.
-
-### Update 07/04/2020
-Small config.plist update for clean headphone audio. 
-
-If you'd like to update your current working setup (from before 07/04/2020):
-  - In the boot-args field in your config.plist, change **alcid=3** to **alcid=15**
-
-
-### Update 07/02/2020
-
-The last 2 real issues are resolved in this update:
-- The weird click/highlight stick after sleep has been fixed with the new modified VoodooI2CSynaptics.kext included in VoodooI2C-CB13.zip
-- Lid wake now works
-
-If you'd like to update your current working setup (from before 07/02/2020): 
-- Download and replace **both** kexts included in [VoodooI2C-CB13.zip](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip) (VoodoI2C.kext and VoodooI2CSynaptics.kext)
-- Add **darkwake=1** to the boot-args of your config
+- Confirmed working on 10.15.6. I updated successfully through System Preferences.
 
 #
 
 ### Requirements:
   - Core i3 or Core i5 processor
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
-  - [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) 
+  - [OpenCore 0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0) 
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
@@ -50,7 +41,7 @@ If you'd like to update your current working setup (from before 07/02/2020):
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
   - OpenCore is set to boot at 1280x1024 - booting at 1920x1080 causes the login screen to load up with extreme graphical glitches so don't bother changing it
   - Most DRM doesn't work. If you need streaming services like Netflix, Hulu, Amazon Prime, etc., then this might not be for you. Or dual boot!
-    
+  
 ### What's Working: 
   - Just about everything!
   
@@ -58,10 +49,6 @@ If you'd like to update your current working setup (from before 07/02/2020):
   - Touchscreen - unlikely that this will ever work - fairly uncommon to have one on this device anyway
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - This isn't specific to the Dell CB13. DRM simply does not work on an iGPU only Hackintosh 
-  - ~~Occasionally the trackpad will get stuck in a drag/highlight mode after waking from sleep~~
-    - Fixed! 07/02/2020
-  - ~~Wake on lid open (you have to press a key to wake)~~
-    - Fixed! 07/02/2020
   
 ### To Do:  
   - Try to move keyboard backlight control modifications from DSDT to SSDT for easier firmware upgrades
@@ -79,7 +66,7 @@ If you'd like to update your current working setup (from before 07/02/2020):
 - Create a MacOS installer flash drive
     - Use [this guide](https://dortania.github.io/vanilla-laptop-guide/preparations/online-installer.html) if you're on Windows or Linux
     - Use [this guide](https://dortania.github.io/vanilla-laptop-guide/preparations/offline-installer.html) if you're on MacOS
-- Download [OpenCore 0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
+- Download [OpenCore 0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
 - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
 - Move the required files to their appropriate locations on your installer flash drive
    - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/EFI.png) - make sure all of the files are there (leave out the 4 WiFi/Bluetooth kexts if you're using a BCM94360NG)
@@ -126,7 +113,6 @@ Place these in /EFI/OC/Drivers
 - [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
 - OpenCanopy.efi
 - OpenRuntime.efi
-- Ps2KeyboardDxe.efi
 
 ### DSDT/SSDT files
 Place these in /EFI/OC/ACPI
@@ -153,9 +139,11 @@ Place these in /EFI/OC/Kexts
   - SMCProcessor.kext
   - SMCSuperIO.kext
 - [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.zip)
-- [VoodooI2C.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooI2C-CB13.zip) 
-  - VoodooI2CSynaptics.kext
-    - This is a modified VoodooI2CSynaptics.kext for proper trackpad sensitivity and proper functionality after sleep
+- [VoodooI2C.kext](https://github.com/VoodooI2C/VoodooI2C/releases)
+- [VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI/releases)
+  -  For version 1.0.1, you will need to add SYNA0000 to the info.plist file found in VoodooRMI.kext/Contents/PlugIns/RMII2C.kext/Contents
+    - Simply open the info.plist file and replace the one instance of SYNA2B33 with SYNA0000
+    - This shouldn't be necessary for future versions
 - [VoodooPS2Controller.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooPS2Controller-CB13.zip)
   - This is a modified VoodooPS2Controller.kext that changes the keyboard brightness control keys to ones that actually exist on most laptops. In this case, left ctrl + alt + F6/F7 (CB13 brightness keys)
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
