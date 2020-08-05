@@ -1,5 +1,7 @@
 ### 08/04/2020
 - Updated config.plist for OpenCore 0.6.0
+- Switched to VoodooRMI.kext for trackpad kext
+  - No longer using VoodooI2CSynaptics.kext
 
 ### 07/29/2020
 - Confirmed working on MacOS 10.15.6
