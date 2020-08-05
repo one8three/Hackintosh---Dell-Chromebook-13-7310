@@ -69,7 +69,7 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
 - Download [OpenCore 0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
 - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
 - Move the required files to their appropriate locations on your installer flash drive
-   - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/EFI.png) - make sure all of the files are there (leave out the 4 WiFi/Bluetooth kexts if you're using a BCM94360NG)
+   - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/EFI.png) - make sure all of the files are there (leave out the 4 highlighted WiFi/Bluetooth kexts if you're using a BCM94360NG)
 - Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need it for the next step
 - Follow the PlatformInfo portion of the [this guide](https://dortania.github.io/vanilla-laptop-guide/OpenCore/config-laptop.plist/broadwell.html#platforminfo) to edit the config.plist from this repo
    - You can use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate the SMBIOS info and [ProperTree](https://github.com/corpnewt/ProperTree) to confirm GenSMBIOS worked properly or paste the SMBIOS info into the proper locations in your plist file
