@@ -55,7 +55,7 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
       - This isn't specific to the Dell CB13. DRM simply does not work on an iGPU only Hackintosh 
   
 ### To Do:  
-  - Try to move keyboard backlight control modifications from DSDT to SSDT for easier firmware upgrades
+  - Prepare for Big Sur!
 
 #
 
