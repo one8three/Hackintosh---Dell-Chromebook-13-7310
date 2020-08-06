@@ -48,7 +48,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-KKBL.aml</string>
+				<string>SSDT-KBBL.aml</string>
 				<key>Path</key>
 				<string>SSDT-KBBL.aml</string>
 				<key>Enabled</key>
