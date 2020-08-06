@@ -1,7 +1,11 @@
+### 08/05/2020
+- Switched away from using a modified DSDT for keyboard backlight control
+  - Now using SSDT-KBBL.aml
+
 ### 08/04/2020
 - Updated config.plist for OpenCore 0.6.0
 - Switched to VoodooRMI.kext for trackpad kext
-  - No longer using VoodooI2CSynaptics.kext
+  - No longer using the modified VoodooI2CSynaptics.kext
 
 ### 07/29/2020
 - Confirmed working on MacOS 10.15.6
