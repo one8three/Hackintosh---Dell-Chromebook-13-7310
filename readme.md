@@ -2,6 +2,7 @@
 
 ### Confirmed working on:
 - MacOS: **Catalina 10.15.6**
+- MacOS beta: **Big Sur (Public Beta)**
 - MrChromebox coreboot: **4.12**
 - OpenCore: **0.6.0**
 
@@ -10,6 +11,10 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
 
 
 #
+### Update 08/07/2020
+- Updated for Big Sur beta confirmation
+  - Only real changes were for the DW1560 where AirPortBrcm4360_Injector.kext needs to be disabled/blocked from AirportBrcmFixup.kext
+
 ### Update 08/05/2020
 - Switched to SSDT-KBBL.aml for keyboard backlight control
   - DSDT.aml no longer required
@@ -20,7 +25,6 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
   - More on this in the Required Kexts section below
   - No longer using a modified VoodooI2CSynaptics.kext
 - In an attempt to make this easier to maintain, this will be the last time multiple configs are supplied
-
    
 ### Update 07/29/2020
 - Confirmed working on 10.15.6. I updated successfully through System Preferences.
@@ -45,7 +49,7 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
   - Keyboard backlight is controlled with left ctrl + alt + brightness keys (F6/F7). There are 7 stages, including off
   - OpenCore is set to boot at 1280x1024 - booting at 1920x1080 causes the login screen to load up with extreme graphical glitches so don't bother changing it
   - Most DRM doesn't work. If you need streaming services like Netflix, Hulu, Amazon Prime, etc., then this might not be for you. Or dual boot!
-  
+
 ### What's Working: 
   - Just about everything!
   
@@ -53,6 +57,7 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
   - Touchscreen - unlikely that this will ever work - fairly uncommon to have one on this device anyway
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - This isn't specific to the Dell CB13. DRM simply does not work on an iGPU only Hackintosh 
+  - Karabiner doesn't work on Big Sur yet so top row keyboard remapping isn't working
   
 ### To Do:  
   - Prepare for Big Sur!
@@ -117,7 +122,7 @@ Place these in /EFI/OC/Drivers
 - OpenCanopy.efi
 - OpenRuntime.efi
 
-### DSDT/SSDT files
+### SSDT files
 Place these in /EFI/OC/ACPI
 - [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT-EC.aml)
   - Creates a phony EC controller - required to boot Catalina
