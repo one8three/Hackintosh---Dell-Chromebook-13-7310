@@ -124,9 +124,9 @@ Place config.plist in /EFI/OC/
     - If you are using a BCM94360NG for wifi:
       - Delete the following kext entries from the config:
         - AirportBrcmFixup.kext
-        - AirportBrcm43
+        - AirPortBrcm4360_Injector.kext
         - BrcmBluetoothInjector.kext
-        - BrcmFirmwareData
+        - BrcmFirmwareData.kext
         - BrcmPatchRAM3.kext
       - Remove "brcmfx-driver=2 -brcmfxbeta" from the boot-args field
     - Follow the PlatformInfo portion of [this guide](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/broadwell.html#platforminfo) to edit the config.plist
