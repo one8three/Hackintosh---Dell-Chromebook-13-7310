@@ -93,7 +93,7 @@
 - Install your new WiFi card if you haven't already
    - I had an odd issue of the Chromebook not booting after initially installing the new WiFi card. If this happens, disconnect the battery and WiFi card and try again.
 - Boot to your installer and install MacOS
-- Boot into MacOS using your installer flash drive and copy the EFI folder from you installer flashdrive to the EFI partition of your internal SSD - you can mount the EFI partition with [MountEFI](https://github.com/corpnewt/MountEFI)
+- Boot into MacOS using your installer flash drive and copy the EFI folder from you installer flash drive to the EFI partition of your internal SSD - you can mount the EFI partition with [MountEFI](https://github.com/corpnewt/MountEFI)
     - More info can be found [here](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) 
 - Follow the [post install](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#post-install) steps below
  
@@ -106,7 +106,7 @@
   - Map Mission Control key (F5) Mission Control in: **System Preferences > Keyboard > Shortcuts > Mission Control**
     - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Mission_Control.png) 
 - Optional: Give OpenCore a [GUI menu and boot chime](https://dortania.github.io/OpenCore-Desktop-Guide/extras/gui.html)
-  - Use the this [OCEFIAudio_VoiceOver_Boot.wav](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Misc%20FIles/OCEFIAudio_VoiceOver_Boot.wav) as it is resampled to work with the CB13
+  - Use this [OCEFIAudio_VoiceOver_Boot.wav](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Misc%20FIles/OCEFIAudio_VoiceOver_Boot.wav) as it is resampled to work with the CB13
 
 If you want a full Hackintosh guide (not Chromebook specific), I suggest this one: https://dortania.github.io/OpenCore-Install-Guide/ -
 most of the files in this repo were created using this guide so you won't need to generate them yourself. Simply pull them from here as you go through the guide.
@@ -121,7 +121,7 @@ Place config.plist in /EFI/OC/
     - Some i3 models require the iGPU to be spoofed to HD 6000. If you have trouble booting MacOS you may need to add the boxed lines seen [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/Master/Images/HD%206000%20spoofing.png) - Fix found by @mankot14
       - AAPL,ig-platform-id - Data - 06002616
       - device-id - Data - 26160000
-    - If you are **not** using a DW1560 for wifi:
+    - If you are using a BCM94360NG for wifi:
       - Delete the following kext entries from the config:
         - AirportBrcmFixup.kext
         - AirportBrcm43
@@ -134,7 +134,7 @@ Place config.plist in /EFI/OC/
        - Use a MacBookAir7,2 profile
        - In the config.plist, you need to fill in values for: SystemProductName, SystemSerialNumber, MLB, SystemUUID, and ROM 
        - Use your MAC address without the colons for the ROM field (You did get your MAC address, right?)
-     - Be sure to rename your config file to config.plist
+     - Be sure to rename the config file to config.plist
     
     
 ### OpenCore Drivers
@@ -174,7 +174,7 @@ Place these in /EFI/OC/Kexts
 - [VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI/releases)
   -  For version 1.0.1, you will need to add SYNA0000 to the info.plist file found in VoodooRMI.kext/Contents/PlugIns/RMII2C.kext/Contents
     - Simply open the info.plist file and replace the one instance of SYNA2B33 with SYNA0000
-    - This shouldn't be necessary for future versions
+    - This shouldn't be necessary for future versions of VoodooRMI
 - [VoodooPS2Controller.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooPS2Controller-CB13.zip)
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.zip)
