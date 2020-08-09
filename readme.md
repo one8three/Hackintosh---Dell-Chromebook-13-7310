@@ -107,8 +107,10 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
 - Disable force click in trackpad settings
 - Disable hibernate with "sudo pmset -a hibernatemode 0"
 - Map Full Screen and Mission Control keys
-  - Map Full Screen button (F4) to full screen in [System Preferences > Keyboard > Shortcuts > App Shortcuts](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Full_Screen.png)
-  - Map Mission Control key (F5) Mission Controlin System Preferences > Keyboard > Shortcuts > [Mission Control](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Mission_Control.png) 
+  - Map Full Screen button (F4) to full screen in System Preferences > **Keyboard > Shortcuts > App Shortcuts**
+    - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Full_Screen.png)
+  - Map Mission Control key (F5) Mission Control in: **System Preferences > Keyboard > Shortcuts > Mission Control**
+    - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Mission_Control.png) 
 - Optional: Give OpenCore a [GUI menu and boot chime](https://dortania.github.io/OpenCore-Desktop-Guide/extras/gui.html)
   - Use the this [OCEFIAudio_VoiceOver_Boot.wav](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/OCEFIAudio_VoiceOver_Boot.wav) as it is resampled to work with the CB13
 
