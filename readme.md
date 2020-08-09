@@ -121,12 +121,14 @@ Place config.plist in /EFI/OC/
     - Some i3 models require the iGPU to be spoofed to HD 6000. If you have trouble booting MacOS you may need to add the boxed lines seen [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/Master/Images/HD%206000%20spoofing.png) - Fix found by @mankot14
       - AAPL,ig-platform-id - Data - 06002616
       - device-id - Data - 26160000
-    - If you are **not** using a DW1560 for wifi, you need to delete the following kext entries from the config:
-      - AirportBrcmFixup.kext
-      - AirportBrcm43
-      - BrcmBluetoothInjector.kext
-      - BrcmFirmwareData
-      - BrcmPatchRAM3.kext
+    - If you are **not** using a DW1560 for wifi:
+      - Delete the following kext entries from the config:
+        - AirportBrcmFixup.kext
+        - AirportBrcm43
+        - BrcmBluetoothInjector.kext
+        - BrcmFirmwareData
+        - BrcmPatchRAM3.kext
+      - Remove "brcmfx-driver=2 -brcmfxbeta" from the boot-args field
     - Follow the PlatformInfo portion of [this guide](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/broadwell.html#platforminfo) to edit the config.plist
       - You can use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate the SMBIOS info
        - Use a MacBookAir7,2 profile
