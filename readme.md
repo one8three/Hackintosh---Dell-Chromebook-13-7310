@@ -7,7 +7,7 @@
 - OpenCore: **0.6.0**
 
 #
-**Disclaimer:** This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It may or may not work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist. I am not responsible for and damage done or data lost by attempting this.
+**Disclaimer:** This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It may or may not work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist. I am not responsible for any damage done or data lost by attempting this.
 
 
 #
