@@ -7,19 +7,19 @@
 - OpenCore: **0.6.0**
 
 #
-**Disclaimer:** This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It may or may not work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist. I am not responsible for any damage done or data lost by attempting this.
+**Disclaimer:** This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It's not guaranteed to work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist. I do not know what those changes may be. I am not responsible for any damage done or data lost by attempting this.
 
 
 #
-### Update 08/07/2020
+### Update 08/09/2020
 - Confirmed working on MacOS 11.0 Big Sur Public Beta
-  - Configs updated
-  - VoodooPS2Controller big update
-    - Most top row keys are now mapped through the kext
-    - Keyboard backlight now controlled with left ctrl + alt + "comma" and "period" keys
+- Config updated
+  - No longer maintaining multiple configs
+- VoodooPS2Controller.kext updated
+  - Most top row keys are now mapped through the kext
+  - Keyboard backlight now controlled with left ctrl + alt + "comma" and "period" keys
   - Karabiner no longer required!
-- A lot of clean up/restructuring of readme.md
-- No longer maintaining multiple configs
+- Some clean up/restructuring of readme.md
 
 ### Update 08/05/2020
 - Switched to SSDT-KBBL.aml for keyboard backlight control
@@ -28,7 +28,6 @@
 ### Update 08/04/2020
 - Updated configs for OpenCore 0.6.0
 - Switched to [VoodooRMI](https://github.com/VoodooSMBus/VoodooRMI/releases) as the trackpad kext
-  - More on this in the Required Kexts section below
   - No longer using a modified VoodooI2CSynaptics.kext
 - In an attempt to make this easier to maintain, this will be the last time multiple configs are supplied
    
