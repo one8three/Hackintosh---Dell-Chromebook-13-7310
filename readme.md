@@ -147,17 +147,17 @@ Place these in /EFI/OC/Drivers
 
 ### SSDT files
 Place these in /EFI/OC/ACPI
-- [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT_Files/SSDT-EC.aml)
+- [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-EC.aml)
   - Creates a phony EC controller - required to boot Catalina
-- [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT_Files/SSDT-PNLF.aml)
+- [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-PNLF.aml)
   - Enables LCD backlight control
-- [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT_Files/SSDT-PLUG.aml)
+- [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-PLUG.aml)
   - Enables proper CPU power management 
-- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT_Files/SSDT-HPET.aml)
+- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-HPET.aml)
   - Fixes IRQ conflicts with MacOS
-- [SSDT-KBBL.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT_Files/SSDT-KBBL.aml)
+- [SSDT-KBBL.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-KBBL.aml)
   - Required for keyboard backlight control
-- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT_Files/SSDT-SBUS-MCHC.aml)
+- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-SBUS-MCHC.aml)
   - This one might not actually be necessary but it doesn't seem to have any negative side-effects
 
 ### Required Kexts
