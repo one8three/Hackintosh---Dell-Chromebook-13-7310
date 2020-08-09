@@ -169,15 +169,15 @@ Place these in /EFI/OC/Kexts
   - SMCBatteryManager.kext
   - SMCProcessor.kext
   - SMCSuperIO.kext
-- [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/USBMap.zip)
+- [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/USBMap.zip)
 - [VoodooI2C.kext](https://github.com/VoodooI2C/VoodooI2C/releases)
 - [VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI/releases)
   -  For version 1.0.1, you will need to add SYNA0000 to the info.plist file found in VoodooRMI.kext/Contents/PlugIns/RMII2C.kext/Contents
     - Simply open the info.plist file and replace the one instance of SYNA2B33 with SYNA0000
     - This shouldn't be necessary for future versions of VoodooRMI
-- [VoodooPS2Controller.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/VoodooPS2Controller-CB13.zip)
+- [VoodooPS2Controller.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/VoodooPS2Controller-CB13.zip)
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
-- [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CPUFriendDataProvider.zip)
+- [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/CPUFriendDataProvider.zip)
 
 ### Kexts for Dell DW1560 wifi
 Place these in /EFI/OC/Kexts 
