@@ -112,7 +112,7 @@ This is not meant to be a thorough guide or walkthrough. It is merely a dump of 
   - Map Mission Control key (F5) Mission Control in: **System Preferences > Keyboard > Shortcuts > Mission Control**
     - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Mission_Control.png) 
 - Optional: Give OpenCore a [GUI menu and boot chime](https://dortania.github.io/OpenCore-Desktop-Guide/extras/gui.html)
-  - Use the this [OCEFIAudio_VoiceOver_Boot.wav](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/OCEFIAudio_VoiceOver_Boot.wav) as it is resampled to work with the CB13
+  - Use the this [OCEFIAudio_VoiceOver_Boot.wav](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Misc%20FIles/OCEFIAudio_VoiceOver_Boot.wav) as it is resampled to work with the CB13
 
 If you want a full Hackintosh guide (not Chromebook specific), I suggest this one: https://dortania.github.io/OpenCore-Install-Guide/ -
 most of the files in this repo were created using this guide so you won't need to generate them yourself. Simply pull them from here as you go through the guide.
