@@ -11,6 +11,10 @@
 
 
 #
+### Update 08/13/2020
+- Switch back to VoodooI2CSynaptics.kext
+  - No more VoodooRMI.kext
+
 ### Update 08/09/2020
 - Confirmed working on MacOS 11.0 Big Sur Public Beta
 - Config updated
@@ -87,7 +91,7 @@
   - A guide can be found [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
 - Download [OpenCore 0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
 - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
-  - Be sure to make any edits mentioned - particularly to config.plist and VoodooRMI.kext
+  - Be sure to make any edits mentioned - particularly to config.plist and VoodooI2CSynaptics.kext
 - Move the required files to their appropriate locations on your installer flash drive
    - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/EFI.png) - make sure all of the files are there (leave out the 4 highlighted WiFi/Bluetooth kexts if you're using a BCM94360NG)
 - Install your new WiFi card if you haven't already
@@ -118,7 +122,7 @@ most of the files in this repo were created using this guide so you won't need t
 Place config.plist in /EFI/OC/
   - [config-base.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/tree/master/config-base.plist)
     - Use [ProperTree](https://github.com/corpnewt/ProperTree) to make the following edits to the config-base.plist file
-    - Some i3 models require the iGPU to be spoofed to HD 6000. If you have trouble booting MacOS you may need to add the boxed lines seen [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/Master/Images/HD%206000%20spoofing.png) - Fix found by @mankot14
+    - Some i3 models require the iGPU to be spoofed to HD 6000. If you have trouble booting MacOS you may need to add the boxed lines seen [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/HD%206000%20spoofing.png) - Fix found by @mankot14
       - AAPL,ig-platform-id - Data - 06002616
       - device-id - Data - 26160000
     - If you are using a BCM94360NG for wifi:
@@ -170,12 +174,12 @@ Place these in /EFI/OC/Kexts
   - SMCProcessor.kext
   - SMCSuperIO.kext
 - [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/USBMap.zip)
-- [VoodooI2C.kext](https://github.com/VoodooI2C/VoodooI2C/releases)
-- [VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI/releases)
-  -  For version 1.0.1, you will need to add SYNA0000 to the info.plist file found in VoodooRMI.kext/Contents/PlugIns/RMII2C.kext/Contents
-    - Simply open the info.plist file and replace the one instance of SYNA2B33 with SYNA0000
-    - This shouldn't be necessary for future versions of VoodooRMI
-- [VoodooPS2Controller.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/VoodooPS2Controller-CB13.zip)
+- [VoodooI2C.kext](https://github.com/VoodooI2C/VoodooI2C/files/5061517/Archive.zip)
+  - VoodooI2CSynaptics.kext
+    -  You will need to add SYNA0000 to the info.plist file found in VoodooI2CSynaptic.kext/Contents/
+      - Simply open the info.plist file and replace the one instance of SYNA2B33 with SYNA0000
+- [VoodooPS2Controller.kext](https://github.com/TheRandMan/VoodooPS2-Chromebook/releases)
+  - Custom for Chromebooks
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/CPUFriendDataProvider.zip)
 

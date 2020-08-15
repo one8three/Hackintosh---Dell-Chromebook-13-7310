@@ -1,3 +1,8 @@
+### Update 08/15/2020
+- Switch back to VoodooI2CSynaptics.kext
+  - No more VoodooRMI.kext
+
+
 ### Update 08/09/2020
 - Confirmed working on MacOS 11.0 Big Sur Public Beta
 - Config updated
