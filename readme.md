@@ -11,6 +11,10 @@
 
 
 #
+### Update XX/XX/2020
+- Mentioned Intel wifi kext
+  - Won't be supported here but is worth a mention and should work fine.
+
 ### Update 08/13/2020
 - Switch back to VoodooI2CSynaptics.kext
   - No more VoodooRMI.kext
@@ -49,6 +53,8 @@
   - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
     - I can confirm the Dell DW1560 works in MacOS (with additional kexts), Windows, & Ubuntu
     - Other users have reported success with the BCM94360NG (has native MacOS support so no additional kexts required!)
+    - **Note:** There is now an Intel wifi kext and the stock wireless card is listed as compatible. I don't have experience with using this so it won't be covered here.
+      - https://github.com/OpenIntelWireless/itlwm
   - MacOS installer flash drive 
     - See the guides linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
@@ -123,8 +129,10 @@ Place config.plist in /EFI/OC/
   - [config-base.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/tree/master/config-base.plist)
     - Use [ProperTree](https://github.com/corpnewt/ProperTree) to make the following edits to the config-base.plist file
     - Some i3 models require the iGPU to be spoofed to HD 6000. If you have trouble booting MacOS you may need to add the boxed lines seen [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/HD%206000%20spoofing.png) - Fix found by @mankot14
-      - AAPL,ig-platform-id - Data - 06002616
-      - device-id - Data - 26160000
+       |                     |      |          |
+       |---------------------|------|----------|
+       | AAPL,ig-platform-id | Data | 06002616 |
+       | device-id           | Data | 26160000 |
     - If you are using a BCM94360NG for wifi:
       - Delete the following kext entries from the config:
         - AirportBrcmFixup.kext
