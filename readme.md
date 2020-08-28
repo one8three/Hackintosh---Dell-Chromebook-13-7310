@@ -12,7 +12,7 @@
 
 #
 ### Update XX/XX/2020
--Spoofed iGPU to HD 6000 as default
+- Spoofed iGPU to HD 6000 as default
   - Required for some devices but has no negative effects on devices that do not require it
 - Mentioned Intel wifi kext in readme
   - Won't be supported here but is worth a mention and should work fine.
