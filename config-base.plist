@@ -226,7 +226,9 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>AgAWFg==</data>
+				<data>BgAmFg==</data>
+				<key>device-id</key>
+				<data>JhYAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
