@@ -12,7 +12,9 @@
 
 #
 ### Update XX/XX/2020
-- Mentioned Intel wifi kext
+-Spoofed iGPU to HD 6000 as default
+  - Required for some devices but has no negative effects on devices that do not require it
+- Mentioned Intel wifi kext in readme
   - Won't be supported here but is worth a mention and should work fine.
 
 ### Update 08/13/2020
@@ -128,11 +130,6 @@ most of the files in this repo were created using this guide so you won't need t
 Place config.plist in /EFI/OC/
   - [config-base.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/tree/master/config-base.plist)
     - Use [ProperTree](https://github.com/corpnewt/ProperTree) to make the following edits to the config-base.plist file
-    - Some i3 models require the iGPU to be spoofed to HD 6000. If you have trouble booting MacOS you may need to add the boxed lines seen [here](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/HD%206000%20spoofing.png) - Fix found by @mankot14
-       |                     |      |          |
-       |---------------------|------|----------|
-       | AAPL,ig-platform-id | Data | 06002616 |
-       | device-id           | Data | 26160000 |
     - If you are using a BCM94360NG for wifi:
       - Delete the following kext entries from the config:
         - AirportBrcmFixup.kext
