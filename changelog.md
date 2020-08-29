@@ -1,7 +1,12 @@
+### Update 08/29/2020
+- Spoofed iGPU to HD 6000 as default
+  - Required for some devices but has no negative effects on devices that do not require it
+- Mentioned Intel wifi kext in readme
+  - Won't be supported here but is worth a mention and should work fine.
+
 ### Update 08/15/2020
 - Switch back to VoodooI2CSynaptics.kext
   - No more VoodooRMI.kext
-
 
 ### Update 08/09/2020
 - Confirmed working on MacOS 11.0 Big Sur Public Beta
