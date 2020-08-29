@@ -11,38 +11,11 @@
 
 
 #
-### Update XX/XX/2020
+### Update 08/28/2020
 - Spoofed iGPU to HD 6000 as default
   - Required for some devices but has no negative effects on devices that do not require it
 - Mentioned Intel wifi kext in readme
   - Won't be supported here but is worth a mention and should work fine.
-
-### Update 08/13/2020
-- Switch back to VoodooI2CSynaptics.kext
-  - No more VoodooRMI.kext
-
-### Update 08/09/2020
-- Confirmed working on MacOS 11.0 Big Sur Public Beta
-- Config updated
-  - No longer maintaining multiple configs
-- VoodooPS2Controller.kext updated
-  - Most top row keys are now mapped through the kext
-  - Keyboard backlight now controlled with left ctrl + alt + "comma" and "period" keys
-  - Karabiner no longer required!
-- Some clean up/restructuring of readme.md
-
-### Update 08/05/2020
-- Switched to SSDT-KBBL.aml for keyboard backlight control
-  - DSDT.aml no longer required
-
-### Update 08/04/2020
-- Updated configs for OpenCore 0.6.0
-- Switched to [VoodooRMI](https://github.com/VoodooSMBus/VoodooRMI/releases) as the trackpad kext
-  - No longer using a modified VoodooI2CSynaptics.kext
-- In an attempt to make this easier to maintain, this will be the last time multiple configs are supplied
-   
-### Update 07/29/2020
-- Confirmed working on 10.15.6. I updated successfully through System Preferences.
 
 #
 
@@ -77,7 +50,7 @@
   - Just about everything!
   
 ### What's Not Working: 
-  - Touchscreen - unlikely that this will ever work - fairly uncommon to have one on this device anyway
+  - Touchscreen - unlikely that this will ever work as there is no kext for it - fairly uncommon to have one on this device anyway
   - Most DRM does not work. This means no Apple TV shows, Hulu, Netflix (in Safari), Amazon Prime streaming, etc.
       - This isn't specific to the Dell CB13. DRM simply does not work on an iGPU only Hackintosh 
   
