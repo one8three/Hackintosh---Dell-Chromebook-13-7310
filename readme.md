@@ -4,13 +4,16 @@
 - MacOS: **Catalina 10.15.6**
 - MacOS beta: **Big Sur 11.0 (Public Beta)**
 - MrChromebox coreboot: **4.12**
-- OpenCore: **0.6.0**
+- OpenCore: **0.6.1**
 
 #
 **Disclaimer:** This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It's not guaranteed to work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist. I do not know what those changes may be. I am not responsible for any damage done or data lost by attempting this.
 
 
 #
+### Update 9/10/2020
+- Updated for OpenCore 0.6.1
+
 ### Update 08/28/2020
 - Spoofed iGPU to HD 6000 as default
   - Required for some devices but has no negative effects on devices that do not require it
@@ -22,7 +25,7 @@
 ### Requirements:
   - Core i3 or Core i5 processor
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
-  - [OpenCore 0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0) 
+  - [OpenCore 0.6.1](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.1) 
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
@@ -70,7 +73,7 @@
 - Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need this later
 - Create a MacOS installer flash drive
   - A guide can be found [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
-- Download [OpenCore 0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
+- Download [OpenCore 0.6.1](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.1) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
 - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
   - Be sure to make any edits mentioned - particularly to config.plist and VoodooI2CSynaptics.kext
 - Move the required files to their appropriate locations on your installer flash drive

@@ -1,3 +1,6 @@
+### Update 9/10/2020
+- Updated for OpenCore 0.6.1
+
 ### Update 08/29/2020
 - Spoofed iGPU to HD 6000 as default
   - Required for some devices but has no negative effects on devices that do not require it
