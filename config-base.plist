@@ -1017,7 +1017,7 @@
 			<key>PasswordSalt</key>
 			<data></data>
 			<key>SecureBootModel</key>
-			<string>Default</string>
+			<string>Disabled</string>
 		</dict>
 		<key>Tools</key>
 		<array>
