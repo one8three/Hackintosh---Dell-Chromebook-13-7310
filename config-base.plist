@@ -662,6 +662,12 @@
 			<data></data>
 			<key>Cpuid1Mask</key>
 			<data></data>
+			<key>DummyPowerManagement</key>
+			<true/>
+			<key>MaxKernel</key>
+			<string></string>
+			<key>MinKernel</key>
+			<string></string>
 		</dict>
 		<key>Patch</key>
 		<array>
@@ -862,8 +868,6 @@
 			<false/>
 			<key>DisableRtcChecksum</key>
 			<false/>
-			<key>DummyPowerManagement</key>
-			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
@@ -880,6 +884,12 @@
 			<false/>
 			<key>DisableLinkeditJettison</key>
 			<true/>
+			<key>ExtendBTFeatureFlags</key>
+			<false/>
+			<key>ForceSecureBootScheme</key>
+			<false/>
+			<key>LegacyCommpage</key>
+			<false/>
 		</dict>
 		<key>Force</key>
 		<array>
@@ -1096,10 +1106,14 @@
 	<dict>
 		<key>Automatic</key>
 		<true/>
+		<key>CustomMemory</key>
+		<false/>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
 			<key>MLB</key>
 			<string></string>
 			<key>ROM</key>
@@ -1112,6 +1126,8 @@
 			<string></string>
 			<key>SystemUUID</key>
 			<string></string>
+			<key>ProcessorType</key>
+			<integer>0</integer>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1209,6 +1225,8 @@
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
 			<key>UgaPassThrough</key>
+			<false/>
+			<key>ForceResolution</key>
 			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>

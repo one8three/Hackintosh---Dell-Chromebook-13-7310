@@ -1,3 +1,7 @@
+### Update 11/18/2020
+- Updated for OpenCore 0.6.3
+- Confirm Big Sur official release compatibility 
+
 ### Update 9/10/2020
 - Updated for OpenCore 0.6.1
 
