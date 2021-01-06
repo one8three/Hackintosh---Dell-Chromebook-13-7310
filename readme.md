@@ -1,7 +1,7 @@
 # Dell Chromebook 13 7310 Hackintosh
 
 ### Confirmed working on:
-- MacOS: **Big Sur 11.0.1**
+- MacOS: **Big Sur 11.1**
 - MrChromebox coreboot: **4.12**
 - OpenCore: **0.6.3**
 
@@ -10,9 +10,9 @@
 
 
 #
-### Update 11/18/2020
-- Updated for OpenCore 0.6.3
-- Confirm Big Sur official release compatibility
+### Update 01/05/2020
+- Confirm compatibility with MacOS Big Sur 11.1
+- Nothing else
 
 #
 
