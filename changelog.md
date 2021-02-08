@@ -1,10 +1,8 @@
-### Update 02/07/2020
-- Confirming compatibility with MacOS Big Sur 11.2
-- Nothing else
+### Update 02/07/2021
+- Confirm compatibility with MacOS Big Sur 11.2
 
-### Update 01/05/2020
-- Confirming compatibility with MacOS Big Sur 11.1
-- Nothing else
+### Update 01/05/2021
+- Confirm compatibility with MacOS Big Sur 11.1
 
 ### Update 11/18/2020
 - Updated for OpenCore 0.6.3
