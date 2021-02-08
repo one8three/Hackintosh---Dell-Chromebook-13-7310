@@ -1,7 +1,7 @@
 # Dell Chromebook 13 7310 Hackintosh
 
 ### Confirmed working on:
-- MacOS: **Big Sur 11.1**
+- MacOS: **Big Sur 11.2**
 - MrChromebox coreboot: **4.12**
 - OpenCore: **0.6.3**
 
@@ -10,9 +10,8 @@
 
 
 #
-### Update 01/05/2020
-- Confirm compatibility with MacOS Big Sur 11.1
-- Nothing else
+### Update 02/07/2021
+- Confirm compatibility with MacOS Big Sur 11.2
 
 #
 
@@ -58,7 +57,7 @@
 
 ## Before Getting Started
 - I strongly suggest becoming familiar with Hackintoshing before jumping into this. Know the downsides, shortcomings, and difficulties. Read through the [dortania guide](https://dortania.github.io/OpenCore-Install-Guide/), poke around on [r/hackintosh](https://reddit.com/r/hackintosh), have a look around [InsanelyMac](https://www.insanelymac.com) and [TonyMacX86](https://www.tonymacx86.com) (even though their tools aren't used here, they still have a lot of useful information), and do some general web searches. Even if a lot of it doesn't make sense, just reading through it and becoming familiar with terms will be helpful!
-- Updates to MacOS, OpenCore, or firmware may break your installation! I will likely be keeping my device up to date so check back here before doing any MacOS, OpenCore, or firmware updates! The latest confirmed working versions will always be at the top of the this page.
+- Updates to MacOS, OpenCore, or firmware may break your installation! The latest versions that I have confirmed to work will always be at the top of the this page.
 - Don't let this section scare you off! Once MacOS is up and running on your system, it is very stable!
 
 
