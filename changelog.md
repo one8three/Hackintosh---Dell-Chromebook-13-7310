@@ -1,3 +1,7 @@
+### Update 02/07/2020
+- Confirming compatibility with MacOS Big Sur 11.2
+- Nothing else
+
 ### Update 01/05/2020
 - Confirming compatibility with MacOS Big Sur 11.1
 - Nothing else
