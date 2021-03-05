@@ -11,7 +11,10 @@
 
 #
 ### Update 03/05/2021
-- Confirm compatibility with MacOS Big Sur 11.2.2
+**NOTE - If you are updating from a previous config, you will need to remove the previous OpenCore boot entry in the firmware boot menu. Select your internal SSD to boot successfully again.**
+- Update to OpenCore 0.6.7
+- Switch to VoodooRMI.kext for trackpad
+- Confirm compatibility with MacOS 11.2.2
 
 ### Update 02/10/2021
 - Confirm compatibility with MacOS Big Sur 11.2.1
@@ -153,7 +156,7 @@ Place these in /EFI/OC/Kexts
 - [VoodooI2C.kext](https://github.com/VoodooI2C/VoodooI2C/releases)
 - [VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI/releases)  
   - You will need to add ACPI0C50 to the info.plist file found in VoodooRMI.kext/Contents/PlugIns/RMII2C.kext/Contents/
-      - Simply open the info.plist file in TextEdit, find the one instance of PNP0C50 and change it to ACPI0C50
+      - Simply open the info.plist file, find the one instance of PNP0C50 and change it to ACPI0C50
   - You do not need the included VoodooSMBus.kext. Leave it out.
 - [VoodooPS2Controller.kext](https://github.com/TheRandMan/VoodooPS2-Chromebook/releases)
   - Custom for Chromebooks. It's an old version but does everything we need at this point.
