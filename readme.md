@@ -72,11 +72,11 @@
 - Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need this later
 - Create a MacOS installer flash drive
   - A guide can be found [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
-- Download [OpenCore 0.6.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.3) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
+- Download [OpenCore 0.6.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.7) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
 - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
-  - Be sure to make any edits mentioned - particularly to config.plist and VoodooI2CSynaptics.kext
+  - Be sure to make any edits mentioned - particularly to config.plist and VoodooRMI.kext
 - Move the required files to their appropriate locations on your installer flash drive
-   - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/EFI.png) - make sure all of the files are there (leave out the 4 highlighted WiFi/Bluetooth kexts if you're using a BCM94360NG)
+   - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/EFI.png) - make sure all of the files are there (leave out the 4 highlighted WiFi/Bluetooth kexts if you're using a BCM94360NG or other natively supported wifi card)
 - Install your new WiFi card if you haven't already
    - I had an odd issue of the Chromebook not booting after initially installing the new WiFi card. If this happens, disconnect the battery and WiFi card and try again.
 - Boot to your installer and install MacOS
@@ -121,7 +121,7 @@ Place config.plist in /EFI/OC/
     
     
 ### OpenCore Drivers
-These are included with the OpenCore download unless noted otherwise.
+These are included with the OpenCore download except for HfsPlus.efi.
 Place these in /EFI/OC/Drivers
 - AudioDxe.efi
 - [HfsPlus.efi](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
