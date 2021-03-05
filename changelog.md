@@ -1,3 +1,8 @@
+### Update 03/05/2021
+- Updated for OpenCore 0.6.7
+- Switched to VoodooRMI.kext for trackpad
+- Confirm compatibility with MacOS 11.2.2
+
 ### Update 02/10/2021
 - Confirm compatibility with MacOS Big Sur 11.2.1
 
