@@ -1,27 +1,27 @@
 # Dell Chromebook 13 7310 Hackintosh
 
 ### Confirmed working on:
-- MacOS: **Big Sur 11.2.1**
+- MacOS: **Big Sur 11.2.2**
 - MrChromebox coreboot: **4.12**
-- OpenCore: **0.6.3**
+- OpenCore: **0.6.7**
 
 #
 **Disclaimer:** This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It's not guaranteed to work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist. I do not know what those changes may be. I am not responsible for any damage done or data lost by attempting this.
 
 
 #
+### Update 03/05/2021
+- Confirm compatibility with MacOS Big Sur 11.2.2
+
 ### Update 02/10/2021
 - Confirm compatibility with MacOS Big Sur 11.2.1
-
-### Update 02/07/2021
-- Confirm compatibility with MacOS Big Sur 11.2
 
 #
 
 ### Requirements:
   - Core i3 or Core i5 processor
   - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
-  - [OpenCore 0.6.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.3) 
+  - [OpenCore 0.6.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.7) 
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
@@ -151,11 +151,12 @@ Place these in /EFI/OC/Kexts
   - SMCSuperIO.kext
 - [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/USBMap.zip)
 - [VoodooI2C.kext](https://github.com/VoodooI2C/VoodooI2C/releases)
-  - VoodooI2CSynaptics.kext
-    -  You will need to add SYNA0000 to the info.plist file found in VoodooI2CSynaptic.kext/Contents/
-      - Simply open the info.plist file and replace the one instance of SYNA2B33 with SYNA0000
+- [VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI/releases)  
+  - You will need to add ACPI0C50 to the info.plist file found in VoodooRMI.kext/Contents/PlugIns/RMII2C.kext/Contents/
+      - Simply open the info.plist file in TextEdit, find the one instance of PNP0C50 and change it to ACPI0C50
+  - You do not need the included VoodooSMBus.kext. Leave it out.
 - [VoodooPS2Controller.kext](https://github.com/TheRandMan/VoodooPS2-Chromebook/releases)
-  - Custom for Chromebooks
+  - Custom for Chromebooks. It's an old version but does everything we need at this point.
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
 - [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/CPUFriendDataProvider.zip)
 
