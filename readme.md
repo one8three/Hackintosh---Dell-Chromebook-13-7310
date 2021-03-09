@@ -1,7 +1,7 @@
 # Dell Chromebook 13 7310 Hackintosh
 
 ### Confirmed working on:
-- MacOS: **Big Sur 11.2.2**
+- MacOS: **Big Sur 11.2.3**
 - MrChromebox coreboot: **4.12**
 - OpenCore: **0.6.7**
 
@@ -92,7 +92,7 @@
     - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Full_Screen.png)
   - Map Mission Control key (F5) Mission Control in: **System Preferences > Keyboard > Shortcuts > Mission Control**
     - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Mission_Control.png) 
-- Optional: Give OpenCore a [GUI menu and boot chime](https://dortania.github.io/OpenCore-Desktop-Guide/extras/gui.html)
+- Optional: Give OpenCore a [GUI menu and boot chime](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
   - Use this [OCEFIAudio_VoiceOver_Boot.wav](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Misc%20FIles/OCEFIAudio_VoiceOver_Boot.wav) as it is resampled to work with the CB13
 
 If you want a full Hackintosh guide (not Chromebook specific), I suggest this one: https://dortania.github.io/OpenCore-Install-Guide/ -
