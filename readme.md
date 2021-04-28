@@ -2,7 +2,7 @@
 
 ### Confirmed working on:
 - MacOS: **Big Sur 11.2.3**
-- MrChromebox coreboot: **4.12** **(DOES NOT CURRENT WORK ON 4.13)**
+- MrChromebox coreboot: **4.12** **(DOES NOT CURRENTLY WORK ON 4.13)**
 - OpenCore: **0.6.7**
 
 #
