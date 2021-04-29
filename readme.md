@@ -2,7 +2,7 @@
 
 ### Confirmed working on:
 - MacOS: **Big Sur 11.2.3**
-- MrChromebox coreboot: **4.12**
+- MrChromebox coreboot: **4.12** **(DOES NOT CURRENTLY WORK ON 4.13)**
 - OpenCore: **0.6.7**
 
 #
@@ -57,7 +57,7 @@
       - This isn't specific to the Dell CB13. DRM simply does not work on an iGPU only Hackintosh 
   
 ### To Do:  
-  - Enjoy MacOS!
+  - Update to support MrChromebox 4.13 firmware
 
 #
 
