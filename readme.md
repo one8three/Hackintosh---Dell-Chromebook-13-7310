@@ -1,7 +1,7 @@
 # Dell Chromebook 13 7310 Hackintosh
 
 ### Confirmed working on:
-- MacOS: **Big Sur 11.2.3**
+- MacOS: **Big Sur 11.4**
 - MrChromebox coreboot: **4.12** **(DOES NOT CURRENTLY WORK ON 4.13)**
 - OpenCore: **0.6.7**
 
@@ -10,6 +10,9 @@
 
 
 #
+### Update 06/07/2021
+- Confirm compatibility with MacOS Big Sur 11.4
+
 ### Update 03/05/2021
 **NOTE - If you are updating from a previous config, you will need to remove the previous OpenCore boot entry in the firmware boot menu. Select your internal SSD to boot successfully again.**
 - Update to OpenCore 0.6.7
