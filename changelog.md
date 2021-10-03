@@ -2,7 +2,7 @@
 - Updated for OpenCore 0.7.3
 - "Fixed" compatibility with MrChromeBox firmware > 4.12
 	- Switch to emulated NVRAM as native NVRAM is now broken with MacOS and MrChromeBox firmware
-- Confirm compatibility up to MacOS 12 (beta)
+- Confirm compatibility up to MacOS Big Sur 11.6
 - Recreated SSDT files to better match new firmware. Replacing the old ones with the new ones is recommended.
 
 ### Update 03/05/2021
