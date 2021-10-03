@@ -11,12 +11,12 @@
 
 #
 ### Update 10/03/2021 
-**Note: users updating from MrChromeBox firmware 4.12 or older should [enable the emulated NVRAM logout hook](https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#enabling-emulated-nvram-with-a-nvram-plist)  
+**Note: users updating from MrChromeBox firmware 4.12 or older should [enable the emulated NVRAM logout hook](https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#enabling-emulated-nvram-with-a-nvram-plist)**  
 
 - Updated for OpenCore 0.7.3
 - "Fixed" compatibility with MrChromeBox firmware > 4.12
 	- Switch to emulated NVRAM as native NVRAM is now broken with MacOS and MrChromeBox firmware
-- Confirm compatibility up to MacOS 12 (beta)
+- Confirm compatibility with MacOS Big Sur 11.6
 - Recreated SSDT files to better match new firmware. Replacing the old ones with the new ones is recommended.
 
 #
