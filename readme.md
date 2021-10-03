@@ -1,33 +1,30 @@
 # Dell Chromebook 13 7310 Hackintosh
 
 ### Confirmed working on:
-- MacOS: **Big Sur 11.4**
-- MrChromebox coreboot: **4.12** **(DOES NOT CURRENTLY WORK ON 4.13)**
-- OpenCore: **0.6.7**
+- MacOS: **Big Sur 11.6**
+- MrChromebox coreboot: **4.14**
+- OpenCore: **0.7.3**
 
 #
 **Disclaimer:** This is not meant to be a thorough guide or walkthrough. It is merely a dump of files and notes to get MacOS working on a Dell Chromebook 13 7310. I will try to keep this updated as I update my Chromebook to future MacOS releases. It's not guaranteed to work on your specific device. If it doesn't, you likely need to make some sort of changes to the supplied config.plist. I do not know what those changes may be. I am not responsible for any damage done or data lost by attempting this.
 
 
 #
-### Update 06/07/2021
-- Confirm compatibility with MacOS Big Sur 11.4
+### Update 10/03/2021 
+**Note: users updating from MrChromeBox firmware 4.12 or older should [enable the emulated NVRAM logout hook](https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#enabling-emulated-nvram-with-a-nvram-plist)  
 
-### Update 03/05/2021
-**NOTE - If you are updating from a previous config, you will need to remove the previous OpenCore boot entry in the firmware boot menu. Select your internal SSD to boot successfully again.**
-- Update to OpenCore 0.6.7
-- Switch to VoodooRMI.kext for trackpad
-- Confirm compatibility with MacOS 11.2.2
-
-### Update 02/10/2021
-- Confirm compatibility with MacOS Big Sur 11.2.1
+- Updated for OpenCore 0.7.3
+- "Fixed" compatibility with MrChromeBox firmware > 4.12
+	- Switch to emulated NVRAM as native NVRAM is now broken with MacOS and MrChromeBox firmware
+- Confirm compatibility up to MacOS 12 (beta)
+- Recreated SSDT files to better match new firmware. Replacing the old ones with the new ones is recommended.
 
 #
 
 ### Requirements:
   - Core i3 or Core i5 processor
-  - [MrChromebox's coreboot firmware 4.12](https://mrchromebox.tech/#fwscript)
-  - [OpenCore 0.6.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.7) 
+  - [MrChromebox's coreboot firmware 4.14](https://mrchromebox.tech/#fwscript)
+  - [OpenCore 0.7.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.3) 
   - Minimum of a 32GB SSD
     - Minimum 64GB recommended
   - A [compatible m.2 WiFi card](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/m2.html#supported-cards)
@@ -60,7 +57,7 @@
       - This isn't specific to the Dell CB13. DRM simply does not work on an iGPU only Hackintosh 
   
 ### To Do:  
-  - Update to support MrChromebox 4.13 firmware
+  - ???
 
 #
 
@@ -75,7 +72,7 @@
 - Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need this later
 - Create a MacOS installer flash drive
   - A guide can be found [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
-- Download [OpenCore 0.6.7](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.7) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
+- Download [OpenCore 0.7.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.3) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
 - Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
   - Be sure to make any edits mentioned - particularly to config.plist and VoodooRMI.kext
 - Move the required files to their appropriate locations on your installer flash drive
@@ -90,6 +87,7 @@
 ## Post-Install
 - Disable force click in trackpad settings
 - Disable hibernate with "sudo pmset -a hibernatemode 0"
+- [Enable the emulated NVRAM logout hook](https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#enabling-emulated-nvram-with-a-nvram-plist) 
 - Map Full Screen and Mission Control keys
   - Map Full Screen button (F4) to full screen in: **System Preferences > Keyboard > Shortcuts > App Shortcuts**
     - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Full_Screen.png)
