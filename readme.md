@@ -33,7 +33,7 @@
     - **Note:** There is now an Intel wifi kext and the stock wireless card is listed as compatible. I don't have experience with using this so it won't be covered here.
       - https://github.com/OpenIntelWireless/itlwm
   - MacOS installer flash drive 
-    - See the guides linked in [Basic Installation Steps](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
+    - See the guides linked in [Basic Installation Steps](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310#basic-installation-steps) below
 
 ### Notes:
   - Keyboard backlight is controlled with left ctrl + alt + "comma" and "period" keys. There are 7 stages, including off
@@ -72,17 +72,17 @@
 - Get the MAC address of your WiFi card - it should be printed on the WiFi card or you can get it from your current OS - you'll need this later
 - Create a MacOS installer flash drive
   - A guide can be found [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#creating-the-usb)
-- Download [OpenCore 0.7.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.3) and copy only the files shown in [this screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
-- Download all of the [required files](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#required-files)
+- Download [OpenCore 0.7.3](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.3) and copy only the files shown in [this screenshot](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Required%20Files%20From%20OC.png) to your flash drive, keeping the folder structure as seen in the image
+- Download all of the [required files](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310#required-files)
   - Be sure to make any edits mentioned - particularly to config.plist and VoodooRMI.kext
 - Move the required files to their appropriate locations on your installer flash drive
-   - Your EFI folder should look like [this](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/EFI.png) - make sure all of the files are there (leave out the 4 highlighted WiFi/Bluetooth kexts if you're using a BCM94360NG or other natively supported wifi card)
+   - Your EFI folder should look like [this](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/EFI.png) - make sure all of the files are there (leave out the 4 highlighted WiFi/Bluetooth kexts if you're using a BCM94360NG or other natively supported wifi card)
 - Install your new WiFi card if you haven't already
    - I had an odd issue of the Chromebook not booting after initially installing the new WiFi card. If this happens, disconnect the battery and WiFi card and try again.
 - Boot to your installer and install MacOS
 - Boot into MacOS using your installer flash drive and copy the EFI folder from you installer flash drive to the EFI partition of your internal SSD - you can mount the EFI partition with [MountEFI](https://github.com/corpnewt/MountEFI)
     - More info can be found [here](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) 
-- Follow the [post install](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310#post-install) steps below
+- Follow the [post install](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310#post-install) steps below
  
 ## Post-Install
 - Disable force click in trackpad settings
@@ -90,11 +90,11 @@
 - [Enable the emulated NVRAM logout hook](https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#enabling-emulated-nvram-with-a-nvram-plist) 
 - Map Full Screen and Mission Control keys
   - Map Full Screen button (F4) to full screen in: **System Preferences > Keyboard > Shortcuts > App Shortcuts**
-    - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Full_Screen.png)
+    - [Example screenshot](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Full_Screen.png)
   - Map Mission Control key (F5) Mission Control in: **System Preferences > Keyboard > Shortcuts > Mission Control**
-    - [Example screenshot](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Mission_Control.png) 
+    - [Example screenshot](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/blob/master/Images/Mission_Control.png) 
 - Optional: Give OpenCore a [GUI menu and boot chime](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)
-  - Use this [OCEFIAudio_VoiceOver_Boot.wav](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/Misc%20FIles/OCEFIAudio_VoiceOver_Boot.wav) as it is resampled to work with the CB13
+  - Use this [OCEFIAudio_VoiceOver_Boot.wav](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/Misc%20FIles/OCEFIAudio_VoiceOver_Boot.wav) as it is resampled to work with the CB13
 
 If you want a full Hackintosh guide (not Chromebook specific), I suggest this one: https://dortania.github.io/OpenCore-Install-Guide/ -
 most of the files in this repo were created using this guide so you won't need to generate them yourself. Simply pull them from here as you go through the guide.
@@ -104,7 +104,7 @@ most of the files in this repo were created using this guide so you won't need t
 
 ### OpenCore Config
 Place config.plist in /EFI/OC/
-  - [config-base.plist](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/tree/master/config-base.plist)
+  - [config-base.plist](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/tree/master/config-base.plist)
     - Use [ProperTree](https://github.com/corpnewt/ProperTree) to make the following edits to the config-base.plist file
     - If you are using a BCM94360NG for wifi:
       - Delete the following kext entries from the config:
@@ -131,17 +131,17 @@ Place these in /EFI/OC/Drivers
 
 ### SSDT files
 Place these in /EFI/OC/ACPI
-- [SSDT-EC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-EC.aml)
+- [SSDT-EC.aml](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-EC.aml)
   - Creates a phony EC controller - required to boot Catalina
-- [SSDT-PLNF.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-PNLF.aml)
+- [SSDT-PLNF.aml](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-PNLF.aml)
   - Enables LCD backlight control
-- [SSDT-PLUG.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-PLUG.aml)
+- [SSDT-PLUG.aml](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-PLUG.aml)
   - Enables proper CPU power management 
-- [SSDT-HPET.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-HPET.aml)
+- [SSDT-HPET.aml](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-HPET.aml)
   - Fixes IRQ conflicts with MacOS
-- [SSDT-KBBL.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-KBBL.aml)
+- [SSDT-KBBL.aml](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-KBBL.aml)
   - Required for keyboard backlight control
-- [SSDT-SBUS-MCHC.aml](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-SBUS-MCHC.aml)
+- [SSDT-SBUS-MCHC.aml](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/SSDT%20Files/SSDT-SBUS-MCHC.aml)
   - This one might not actually be necessary but it doesn't seem to have any negative side-effects
 
 ### Required Kexts
@@ -153,16 +153,16 @@ Place these in /EFI/OC/Kexts
   - SMCBatteryManager.kext
   - SMCProcessor.kext
   - SMCSuperIO.kext
-- [USBMap.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/USBMap.zip)
+- [USBMap.kext](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/USBMap.zip)
 - [VoodooI2C.kext](https://github.com/VoodooI2C/VoodooI2C/releases)
 - [VoodooRMI.kext](https://github.com/VoodooSMBus/VoodooRMI/releases)  
   - You will need to add ACPI0C50 to the info.plist file found in VoodooRMI.kext/Contents/PlugIns/RMII2C.kext/Contents/
       - Simply open the info.plist file, find the one instance of PNP0C50 and change it to ACPI0C50
   - You do not need the included VoodooSMBus.kext. Leave it out.
-- [VoodooPS2Controller.kext](https://github.com/TheRandMan/VoodooPS2-Chromebook/releases)
+- [VoodooPS2Controller.kext](https://github.com/one8three/VoodooPS2-Chromebook/releases)
   - Custom for Chromebooks. It's an old version but does everything we need at this point.
 - [CPUFriend.kext](https://github.com/acidanthera/CPUFriend/releases)
-- [CPUFriendDataProvider.kext](https://github.com/TheRandMan/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/CPUFriendDataProvider.zip)
+- [CPUFriendDataProvider.kext](https://github.com/one8three/Hackintosh---Dell-Chromebook-13-7310/raw/master/CB13%20specific%20%20kexts/CPUFriendDataProvider.zip)
 
 ### Kexts for Dell DW1560 wifi
 Place these in /EFI/OC/Kexts 
@@ -186,5 +186,5 @@ Place these in /EFI/OC/Kexts
 - https://www.tonymacx86.com/
 - https://reddit.com/r/hackintosh
 - https://reddit.com/r/chrultrabook
-- https://github.com/TheRandMan/VoodooPS2-CB13/
+- https://github.com/one8three/VoodooPS2-CB13/
 - https://dortania.github.io/vanilla-laptop-guide/
